@@ -7,4 +7,5 @@ public class DialogueResponse
 {
     public string responseText;
     public string nextNodeId; // Use an ID to reference the next node
+    public string associatedEvent;
 }
