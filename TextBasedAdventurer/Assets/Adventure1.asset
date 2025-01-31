@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be359de955bd9104a8d1604d5cd8944c, type: 3}
+  m_Name: Adventure1
+  m_EditorClassIdentifier: 
+  rootNode:
+    id: 1
+    dialogueText: You are in a dark cave. Silence is your only company.
+    responses:
+    - responseText: Check your pockets.
+      nextNodeId: 2
+    - responseText: Scream for help.
+      nextNodeId: 3
+    - responseText: Walk ahead blindly.
+      nextNodeId: 4
+  dialogueNodes:
+  - id: 2
+    dialogueText: You find a lighter.
+    responses:
+    - responseText: Continue
+      nextNodeId: 5
+  - id: 3
+    dialogueText: The cave walls shake around you.
+    responses:
+    - responseText: Continue
+      nextNodeId: 6
+  - id: 4
+    dialogueText: You stomp into a wall and you faint.
+    responses:
+    - responseText: Continue
+      nextNodeId: 7
