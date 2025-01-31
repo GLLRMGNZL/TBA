@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootNode:
     id: 1
-    dialogueText: You are in a dark cave. Silence is your only company.
+    dialogueText: 'You are in a dark cave. Silence is your only company. '
     responses:
     - responseText: Check your pockets.
       nextNodeId: 2
@@ -24,17 +24,17 @@ MonoBehaviour:
       nextNodeId: 4
   dialogueNodes:
   - id: 2
-    dialogueText: You find a lighter.
+    dialogueText: 'You find a lighter. '
     responses:
     - responseText: Continue
       nextNodeId: 5
   - id: 3
-    dialogueText: The cave walls shake around you.
+    dialogueText: 'The cave walls shake around you. '
     responses:
     - responseText: Continue
       nextNodeId: 6
   - id: 4
-    dialogueText: You stomp into a wall and you faint.
+    dialogueText: 'You stomp into a wall and you faint. '
     responses:
     - responseText: Continue
       nextNodeId: 7

@@ -20,7 +20,6 @@ public class TextManager : MonoBehaviour
             //fullText = currentDialogue.rootNode.dialogueText;
             dialogueText.text = "";
             StartDialogue(currentDialogue.rootNode);
-            StartCoroutine(TypeText());
         }
         else
         {
