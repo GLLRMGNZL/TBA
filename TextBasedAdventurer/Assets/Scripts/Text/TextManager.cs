@@ -36,6 +36,17 @@ public class TextManager : MonoBehaviour
     public Transform responseButtonContainer;
     private string fullText;
     private Queue<string> sentences = new Queue<string>();
+    private bool isTyping = false;
+
+    private void Update()
+    {
+        if (isTyping && Input.anyKeyDown)
+        {
+            // Show full text
+            dialogueText.text = fullText;
+            isTyping = false;
+        }
+    }
 
     public void StartDialogue(DialogueNode node)
     {
@@ -106,13 +117,21 @@ public class TextManager : MonoBehaviour
     // Coroutine writes text letter by letter
     IEnumerator TypeText(DialogueNode node)
     {
+        isTyping = true;
+
         foreach (char character in fullText)
         {
             dialogueText.text += character;
             AudioManager.instance.Play("TypeCharacter");
             yield return new WaitForSeconds(typeSpeed);
-        }
 
+            if (!isTyping)
+            {
+                dialogueText.text = fullText;
+                break;
+            }
+        }
+        if (isTyping) isTyping = false;
         GenerateResponseButtons(node);
     }
 }
