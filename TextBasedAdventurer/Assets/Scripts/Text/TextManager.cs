@@ -41,22 +41,12 @@ public class TextManager : MonoBehaviour
     {
         // Set dialogue title and body dialogueText
         fullText = node.dialogueText;
-        StartCoroutine(TypeText());
+        StartCoroutine(TypeText(node));
 
         // Remove any existing response buttons
         foreach (Transform child in responseButtonContainer)
         {
             Destroy(child.gameObject);
-        }
-
-        // Create and setup response buttons based on current dialogue node
-        foreach (DialogueResponse response in node.responses)
-        {
-            GameObject buttonObj = Instantiate(responseButtonPrefab, responseButtonContainer);
-            buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
-
-            // Setup button to trigger SelectResponse when clicked
-            buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
         }
     }
 
@@ -100,8 +90,21 @@ public class TextManager : MonoBehaviour
         return null;
     }
 
+    private void GenerateResponseButtons(DialogueNode node)
+    {
+        // Create and setup response buttons based on current dialogue node
+        foreach (DialogueResponse response in node.responses)
+        {
+            GameObject buttonObj = Instantiate(responseButtonPrefab, responseButtonContainer);
+            buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = response.responseText;
+
+            // Setup button to trigger SelectResponse when clicked
+            buttonObj.GetComponent<Button>().onClick.AddListener(() => SelectResponse(response));
+        }
+    }
+
     // Coroutine writes text letter by letter
-    IEnumerator TypeText()
+    IEnumerator TypeText(DialogueNode node)
     {
         foreach (char character in fullText)
         {
@@ -109,5 +112,7 @@ public class TextManager : MonoBehaviour
             AudioManager.instance.Play("TypeCharacter");
             yield return new WaitForSeconds(typeSpeed);
         }
+
+        GenerateResponseButtons(node);
     }
 }

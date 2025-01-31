@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.spatialBlend = 0f;
+            s.source.loop = s.loop;
             Debug.Log(s.name);
         }
         Play("Theme");

@@ -421,8 +421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_AnchoredPosition: {x: 19.555, y: 0}
+  m_SizeDelta: {x: -39.1097, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &247827709
 MonoBehaviour:
@@ -674,10 +674,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1656811595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 363.94925, y: -131.11674}
-  m_SizeDelta: {x: 727.8985, y: 262.2335}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590304775
 MonoBehaviour:
@@ -703,13 +703,7 @@ MonoBehaviour:
     congue elementum porttitor vel, blandit ut risus. Sed consequat, est ut ullamcorper
     venenatis, diam augue suscipit dui, id viverra nunc augue a enim. Maecenas bibendum,
     arcu sit amet eleifend fermentum, velit urna luctus ipsum, sit amet cursus dui
-    diam non est. Praesent volutpat lacus in turpis gravida cursus. Sed vehicula
-    odio mi, quis placerat ante finibus a. Integer in blandit ipsum. Proin a blandit
-    nisl, non sodales dolor. Suspendisse iaculis risus eget ultricies fringilla.
-    Maecenas lobortis quis sapien nec commodo. Aenean sit amet lectus porttitor,
-    accumsan risus sed, tempus odio. Sed et scelerisque diam. Curabitur pulvinar
-    egestas dolor quis interdum. Donec vel justo et turpis laoreet dictum. Vivamus
-    venenatis efficitur lorem, dapibus porta ante aliquet faucibus.
+    diam non est.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 526759d405eb10740bdfdf8629537dc8, type: 2}
   m_sharedMaterial: {fileID: 4147634884180342131, guid: 526759d405eb10740bdfdf8629537dc8, type: 2}
@@ -911,6 +905,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932926764}
   m_CullTransparentMesh: 1
+--- !u!1 &1005120227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005120229}
+  - component: {fileID: 1005120228}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1005120228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005120227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c44688e10505d047bf6741ffd3fa3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 03f8ab92a8469634285f0214ca0a3a46, type: 3}
+    volume: 1
+    pitch: 0.55
+    loop: 1
+    source: {fileID: 0}
+  - name: TypeCharacter
+    clip: {fileID: 8300000, guid: f2a39b46b1386f048b4d22887ffc70ee, type: 3}
+    volume: 0.201
+    pitch: 0.75
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1005120229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005120227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361772494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,8 +1148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000009183957, y: 0}
+  m_SizeDelta: {x: -12.4633, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1656811596
 MonoBehaviour:
@@ -1127,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 2
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
@@ -1135,10 +1186,10 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!1 &1848066524
 GameObject:
@@ -1483,3 +1534,4 @@ SceneRoots:
   - {fileID: 163711452}
   - {fileID: 1942570286}
   - {fileID: 626290827}
+  - {fileID: 1005120229}
