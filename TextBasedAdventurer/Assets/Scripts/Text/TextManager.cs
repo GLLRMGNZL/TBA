@@ -118,7 +118,7 @@ public class TextManager : MonoBehaviour
     IEnumerator TypeText(DialogueNode node)
     {
         isTyping = true;
-
+        string previousText = dialogueText.text;
         foreach (char character in fullText)
         {
             dialogueText.text += character;
@@ -127,7 +127,7 @@ public class TextManager : MonoBehaviour
 
             if (!isTyping)
             {
-                dialogueText.text = fullText;
+                dialogueText.text = previousText + fullText;
                 break;
             }
         }
