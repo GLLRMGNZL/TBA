@@ -66,7 +66,7 @@ public class TextManager : MonoBehaviour
 
         DialogueNode nextNode = GetDialogueNodeById(response.nextNodeId);
 
-        // Continuar al siguiente nodo si existe
+        // Continue to next node if exists
         if (nextNode != null && !nextNode.IsLastNode())
         {
             Debug.Log("nextNode responses --> " + nextNode.responses.Count());
@@ -74,6 +74,7 @@ public class TextManager : MonoBehaviour
         }
     }
 
+    // Search next node by id. It avoids recursive serialization
     private DialogueNode GetDialogueNodeById(string id)
     {
         if (currentDialogue == null)
@@ -92,11 +93,9 @@ public class TextManager : MonoBehaviour
         {
             if (node.id == id)
             {
-                return node; // Se encontró el nodo con el ID especificado
+                return node;
             }
         }
-
-        // Si no se encuentra el nodo, muestra un error
         Debug.Log($"No se encontró un nodo con el ID: {id}");
         return null;
     }

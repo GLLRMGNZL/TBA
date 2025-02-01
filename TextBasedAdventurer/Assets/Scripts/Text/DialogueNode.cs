@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogueNode
 {
 
-    public string id; // Unique identifier for the dialog node
+    public string id; // Unique identifier for the dialogue node. It avoids recursive serialization
     public string dialogueText;
     public List<DialogueResponse> responses;
 

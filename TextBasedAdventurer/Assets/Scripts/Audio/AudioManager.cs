@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 
         foreach (Sound s in sounds)
         {
+            // Fill sounds in array with corresponding audio source
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.spatialBlend = 0f;
@@ -35,6 +36,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
+        // If the sound we want to play is found in array sounds, play it. If not, go out of the method
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {

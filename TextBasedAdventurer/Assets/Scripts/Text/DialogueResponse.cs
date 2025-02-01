@@ -6,6 +6,6 @@ using UnityEngine;
 public class DialogueResponse
 {
     public string responseText;
-    public string nextNodeId; // Use an ID to reference the next node
+    public string nextNodeId; // Use an ID to reference the next node. It avoids recursive serialization
     public string associatedEvent;
 }
