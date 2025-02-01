@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
-    
 
+    // Change scene
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

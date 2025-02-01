@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    public AudioMixer audioMixer;
 
     public Sound[] sounds;
 
@@ -29,6 +30,7 @@ public class AudioManager : MonoBehaviour
             s.source.clip = s.clip;
             s.source.spatialBlend = 0f;
             s.source.loop = s.loop;
+            s.source.outputAudioMixerGroup = s.group;
             Debug.Log(s.name);
         }
         Play("Theme");
@@ -49,5 +51,21 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.Play();
         }
+    }
+
+    // Audio settings
+    public void setMasterVolume(float volume)
+    {
+        audioMixer.SetFloat("masterVolume", volume);
+    }
+
+    public void setMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("musicVolume", volume);
+    }
+
+    public void setEffectsVolume(float volume)
+    {
+        audioMixer.SetFloat("effectsVolume", volume);
     }
 }
