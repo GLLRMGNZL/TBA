@@ -24,8 +24,9 @@ public class TextManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
-
+        DontDestroyOnLoad(gameObject);
     }
     #endregion
 

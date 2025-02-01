@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
 
+        DontDestroyOnLoad(gameObject);
     }
 
     #endregion
