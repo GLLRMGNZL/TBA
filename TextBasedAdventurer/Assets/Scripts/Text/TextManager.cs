@@ -34,6 +34,7 @@ public class TextManager : MonoBehaviour
     public float typeSpeed = 0.5f;
     public GameObject responseButtonPrefab;
     public Transform responseButtonContainer;
+    public EventManager eventManager;
     private string fullText;
     private Queue<string> sentences = new Queue<string>();
     private bool isTyping = false;
@@ -63,6 +64,11 @@ public class TextManager : MonoBehaviour
 
     public void SelectResponse(DialogueResponse response)
     {
+        // Execute Event if existing
+        if (!string.IsNullOrEmpty(response.associatedEvent))
+        {
+            eventManager.ExecuteEvent(response.associatedEvent);
+        }
 
         DialogueNode nextNode = GetDialogueNodeById(response.nextNodeId);
 
