@@ -41,5 +41,6 @@ public class EventManager : MonoBehaviour
     private void ChangeHealth(string health)
     {
         PlayerManager.instance.ChangeHealth(int.Parse(health));
+        Debug.Log("Player health: " + PlayerManager.instance.GetHealth());
     }
 }
