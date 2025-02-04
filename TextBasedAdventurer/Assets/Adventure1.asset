@@ -18,23 +18,29 @@ MonoBehaviour:
     responses:
     - responseText: Check your pockets.
       nextNodeId: 2
+      associatedEvent: addItem/lighter
     - responseText: Scream for help.
       nextNodeId: 3
+      associatedEvent: health/-20
     - responseText: Walk ahead blindly.
       nextNodeId: 4
+      associatedEvent: sprite/stompSprite
   dialogueNodes:
   - id: 2
     dialogueText: 'You find a lighter. '
     responses:
     - responseText: Continue
       nextNodeId: 5
+      associatedEvent: 
   - id: 3
     dialogueText: 'The cave walls shake around you. '
     responses:
     - responseText: Continue
       nextNodeId: 6
+      associatedEvent: 
   - id: 4
     dialogueText: 'You stomp into a wall and you faint. '
     responses:
     - responseText: Continue
       nextNodeId: 7
+      associatedEvent: 
