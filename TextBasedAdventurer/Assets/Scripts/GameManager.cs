@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
             return;
         }
 
@@ -29,11 +28,11 @@ public class GameManager : MonoBehaviour
     // Change scene
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
     public void NewGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     // Full Screen
