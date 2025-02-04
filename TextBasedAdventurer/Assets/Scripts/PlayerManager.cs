@@ -5,6 +5,32 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
 
+    #region Singleton
+    public static PlayerManager instance;
+
+    private void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
+    #endregion
+
+
+    // Game preferences
+    private float masterVolume = 150f;
+    private float musicVolume = 150f;
+    private float effectsVolume = 150f;
+
+    // Player mechanics
     private List<string> inventory;
     private int health;
 
@@ -32,5 +58,35 @@ public class PlayerManager : MonoBehaviour
     public int GetHealth()
     {
         return health;
+    }
+
+    public void SetMasterVolume(float num)
+    {
+        masterVolume = num;
+    }
+
+    public void SetMusicVolume(float num)
+    {
+        musicVolume = num;
+    }
+
+    public void SetEffectsVolume(float num)
+    {
+        effectsVolume = num;
+    }
+
+    public float GetMasterVolume()
+    {
+        return masterVolume;
+    }
+
+    public float GetMusicVolume()
+    {
+        return musicVolume;
+    }
+
+    public float GetEffectsVolume()
+    {
+        return effectsVolume;
     }
 }

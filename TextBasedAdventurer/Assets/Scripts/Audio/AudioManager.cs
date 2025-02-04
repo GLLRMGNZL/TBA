@@ -56,15 +56,18 @@ public class AudioManager : MonoBehaviour
     public void setMasterVolume(float volume)
     {
         audioMixer.SetFloat("masterVolume", volume);
+        PlayerManager.instance.SetMasterVolume(volume);
     }
 
     public void setMusicVolume(float volume)
     {
         audioMixer.SetFloat("musicVolume", volume);
+        PlayerManager.instance.SetMusicVolume(volume);
     }
 
     public void setEffectsVolume(float volume)
     {
         audioMixer.SetFloat("effectsVolume", volume);
+        PlayerManager.instance.SetEffectsVolume(volume);
     }
 }

@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
-
     #endregion
 
     // Change scene
