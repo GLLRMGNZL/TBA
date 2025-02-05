@@ -14,33 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootNode:
     id: 1
-    dialogueText: 'You are in a dark cave. Silence is your only company. '
+    dialogueText: 'You are in a dark cave. Silence is your only company. Blablablabla
+      blabla blablabla blablabla Blablablabla blabla blablabla blablabla Blablablabla
+      blabla blablabla blablabla Blablablabla blabla blablabla blablabla blablabla
+      blablablablabla '
     responses:
     - responseText: Check your pockets.
       nextNodeId: 2
-      associatedEvent: addItem/lighter
+      associatedEvents:
+      - sprite/CaveKid2
+      - addItem/lighter
     - responseText: Scream for help.
       nextNodeId: 3
-      associatedEvent: health/-20
+      associatedEvents:
+      - sprite/CaveKid3
+      - health/-20
     - responseText: Walk ahead blindly.
       nextNodeId: 4
-      associatedEvent: sprite/CaveKid3
+      associatedEvents:
+      - sprite/CaveKid3
+      - health/-30
   dialogueNodes:
   - id: 2
     dialogueText: 'You find a lighter. '
     responses:
     - responseText: Continue
       nextNodeId: 5
-      associatedEvent: 
+      associatedEvents: []
   - id: 3
     dialogueText: 'The cave walls shake around you. '
     responses:
     - responseText: Continue
       nextNodeId: 6
-      associatedEvent: 
+      associatedEvents: []
   - id: 4
     dialogueText: 'You stomp into a wall and you faint. '
     responses:
     - responseText: Continue
       nextNodeId: 7
-      associatedEvent: 
+      associatedEvents: []

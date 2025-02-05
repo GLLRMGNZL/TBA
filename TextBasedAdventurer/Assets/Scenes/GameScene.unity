@@ -825,6 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDialogue: {fileID: 11400000, guid: 06e7ad8716791fd429edd7b2283858e3, type: 2}
   dialogueText: {fileID: 590304775}
+  scrollRect: {fileID: 1361772496}
   typeSpeed: 0.05
   responseButtonPrefab: {fileID: 6391618954740924633, guid: 13c8fbba4dca8b744bb6e1800f9ac0e6, type: 3}
   responseButtonContainer: {fileID: 166776449}

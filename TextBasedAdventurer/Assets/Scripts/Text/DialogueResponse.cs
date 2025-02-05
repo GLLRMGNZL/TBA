@@ -7,5 +7,5 @@ public class DialogueResponse
 {
     public string responseText;
     public string nextNodeId; // Use an ID to reference the next node. It avoids recursive serialization
-    public string associatedEvent;
+    public string[] associatedEvents;
 }

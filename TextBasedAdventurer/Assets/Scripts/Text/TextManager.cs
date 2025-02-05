@@ -31,6 +31,7 @@ public class TextManager : MonoBehaviour
 
     public Dialogue currentDialogue;
     public TextMeshProUGUI dialogueText;
+    public ScrollRect scrollRect;
     public float typeSpeed = 0.5f;
     public GameObject responseButtonPrefab;
     public Transform responseButtonContainer;
@@ -65,9 +66,12 @@ public class TextManager : MonoBehaviour
     public void SelectResponse(DialogueResponse response)
     {
         // Execute Event if existing
-        if (!string.IsNullOrEmpty(response.associatedEvent))
+        if (response.associatedEvents.Length > 0)
         {
-            eventManager.ExecuteEvent(response.associatedEvent);
+            for (int i = 0; i < response.associatedEvents.Length; i++)
+            {
+                eventManager.ExecuteEvent(response.associatedEvents[i]);
+            }
         }
 
         DialogueNode nextNode = GetDialogueNodeById(response.nextNodeId);
@@ -130,9 +134,12 @@ public class TextManager : MonoBehaviour
             AudioManager.instance.Play("TypeCharacter");
             yield return new WaitForSeconds(typeSpeed);
 
+            scrollRect.verticalNormalizedPosition = 0f;
+
             if (!isTyping)
             {
                 dialogueText.text = previousText + fullText;
+                scrollRect.verticalNormalizedPosition = 0f;
                 break;
             }
         }
