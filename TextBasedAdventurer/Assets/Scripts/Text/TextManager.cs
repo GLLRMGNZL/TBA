@@ -134,6 +134,7 @@ public class TextManager : MonoBehaviour
             AudioManager.instance.Play("TypeCharacter");
             yield return new WaitForSeconds(typeSpeed);
 
+            // It ensures we always see last text written
             scrollRect.verticalNormalizedPosition = 0f;
 
             if (!isTyping)
