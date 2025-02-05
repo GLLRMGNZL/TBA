@@ -24,7 +24,7 @@ MonoBehaviour:
       associatedEvent: health/-20
     - responseText: Walk ahead blindly.
       nextNodeId: 4
-      associatedEvent: sprite/stompSprite
+      associatedEvent: sprite/CaveKid3
   dialogueNodes:
   - id: 2
     dialogueText: 'You find a lighter. '

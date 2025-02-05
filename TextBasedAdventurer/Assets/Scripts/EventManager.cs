@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEditor.Progress;
 
 public class EventManager : MonoBehaviour
 {
+    public Sprite[] sprites;
+    public Image image;
+
     public void ExecuteEvent(string eventName){
 
         string[] strings = eventName.Split('/');
@@ -29,6 +33,14 @@ public class EventManager : MonoBehaviour
 
     private void ChangeToSprite(string sprite)
     {
+        foreach (Sprite s in sprites)
+        {
+            if (s.name == sprite)
+            {
+                image.sprite = s;
+            }
+        }
+        
         Debug.Log("Sprite activo " + sprite);
     }
 
