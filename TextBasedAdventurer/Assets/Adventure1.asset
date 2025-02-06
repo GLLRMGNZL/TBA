@@ -73,7 +73,8 @@ MonoBehaviour:
     responses:
     - responseText: Abrir el armario.
       nextNodeId: 9
-      associatedEvents: []
+      associatedEvents:
+      - addItem/Lantern
     - responseText: Correr hacia la luz.
       nextNodeId: 3
       associatedEvents: []
