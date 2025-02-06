@@ -52,6 +52,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.Log("The sound " + name + " was not found!");
+            return;
+        }
+        else
+        {
+            s.source.Stop();
+        }
+    }
+
     // Audio settings
     public void setMasterVolume(float volume)
     {
