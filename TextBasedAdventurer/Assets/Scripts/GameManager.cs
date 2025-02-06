@@ -24,14 +24,29 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    public Animator transition;
+
     // Change scene
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene(0);
+        Debug.Log("ReturnToMenu called");
+        StartCoroutine(LoadLevel(0));
     }
     public void NewGame()
     {
-        SceneManager.LoadScene(1);
+        Debug.Log("NewGame called");
+        StartCoroutine(LoadLevel(1));
+    }
+
+    // Transition between scenes
+    IEnumerator LoadLevel(int level)
+    {
+        Debug.Log("LoadLevel" + level + " called");
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(level);
     }
 
     // Full Screen
