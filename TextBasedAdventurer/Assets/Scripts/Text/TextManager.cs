@@ -140,6 +140,7 @@ public class TextManager : MonoBehaviour
             if (!isTyping)
             {
                 dialogueText.text = previousText + fullText;
+                Canvas.ForceUpdateCanvases();
                 scrollRect.verticalNormalizedPosition = 0f;
                 break;
             }
