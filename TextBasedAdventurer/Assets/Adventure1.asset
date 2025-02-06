@@ -14,42 +14,122 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootNode:
     id: 1
-    dialogueText: 'You are in a dark cave. Silence is your only company. Blablablabla
-      blabla blablabla blablabla Blablablabla blabla blablabla blablabla Blablablabla
-      blabla blablabla blablabla Blablablabla blabla blablabla blablabla blablabla
-      blablablablabla '
+    dialogueText: "Una cueva en la oscuridad. El silencio te envuelve y sientes un
+      escalofr\xEDo recorriendo tu espina dorsal. Est\xE1s tirado en el suelo. Est\xE1
+      fr\xEDo, o quiz\xE1s mojado, no podr\xEDas notar la diferencia. "
     responses:
-    - responseText: Check your pockets.
+    - responseText: "Lev\xE1ntate"
       nextNodeId: 2
-      associatedEvents:
-      - sprite/CaveKid2
-      - addItem/lighter
-    - responseText: Scream for help.
-      nextNodeId: 3
-      associatedEvents:
-      - sprite/CaveKid3
-      - health/-20
-    - responseText: Walk ahead blindly.
-      nextNodeId: 4
-      associatedEvents:
-      - sprite/CaveKid3
-      - health/-30
+      associatedEvents: []
   dialogueNodes:
   - id: 2
-    dialogueText: 'You find a lighter. '
+    dialogueText: "Sientes c\xF3mo tu coraz\xF3n bombea sangre hacia tu cabeza. Parece
+      que va a explotar. Tus ojos se acostumbran a la oscuridad de la cueva y, a
+      lo lejos, crees vislumbrar una tenue luz anaranjada. "
     responses:
-    - responseText: Continue
+    - responseText: Correr hacia la luz.
+      nextNodeId: 3
+      associatedEvents: []
+    - responseText: Gritar pidiendo ayuda.
+      nextNodeId: 4
+      associatedEvents: []
+    - responseText: Examinar el resto de la cueva.
       nextNodeId: 5
       associatedEvents: []
   - id: 3
-    dialogueText: 'The cave walls shake around you. '
+    dialogueText: "Corres hacia la luz. La presi\xF3n aumenta en tu cabeza mientras
+      avanzas a atrompicones. Tropiezas con un objeto contundente que te hace caer
+      al suelo, pero la promesa de la luz creciente te hace seguir avanzando. A ella
+      se suma un sonido chirriante que te hace apretar los dientes. Una puerta se
+      levanta frente a t\xED, al otro lado, la desconocida fuente de luz ahora se
+      muestra desafiante. "
     responses:
-    - responseText: Continue
+    - responseText: Abrir la puerta.
       nextNodeId: 6
       associatedEvents: []
-  - id: 4
-    dialogueText: 'You stomp into a wall and you faint. '
-    responses:
-    - responseText: Continue
+    - responseText: Llamar a la puerta.
       nextNodeId: 7
+      associatedEvents: []
+  - id: 4
+    dialogueText: "El sonido de tu voz retumba en las paredes, que parecen temblar.
+      La intensidad del eco de tus gritos te destroza los o\xEDdos. Cierras los ojos
+      con fuerza mientras tu cabeza recibe pu\xF1aladas de dolor... Que cesan al
+      instante. Abres los ojos y lo que era una luz tenue en la oscuridad ahora es
+      una luz radiante que te invita a salir de la cueva. "
+    responses:
+    - responseText: Ir hacia la luz.
+      nextNodeId: 8
+      associatedEvents: []
+    - responseText: Ir hacia la luz.
+      nextNodeId: 8
+      associatedEvents: []
+    - responseText: Ir hacia la luz.
+      nextNodeId: 8
+      associatedEvents: []
+  - id: 5
+    dialogueText: "Con paciencia, examinas la cueva mientras tus ojos se acostumbran
+      cada vez m\xE1s a la oscuridad. Entre las tinieblas, encuentras un armario.
+      Adem\xE1s, a lo lejos, la luz tenue parece aumentar su intensidad. "
+    responses:
+    - responseText: Abrir el armario.
+      nextNodeId: 9
+      associatedEvents: []
+    - responseText: Correr hacia la luz.
+      nextNodeId: 3
+      associatedEvents: []
+    - responseText: Avanzar con cautela hacia la fuente de luz.
+      nextNodeId: 10
+      associatedEvents: []
+  - id: 6
+    dialogueText: "Abres la puerta abalanz\xE1ndote sobre ella. Al hacerlo, la luz
+      al otro lado se hace a\xF1icos sobre t\xED. "
+    responses:
+    - responseText: Seguir avanzando a ciegas.
+      nextNodeId: 11
+      associatedEvents: []
+    - responseText: Dar media vuelta hacia la cueva.
+      nextNodeId: 12
+      associatedEvents: []
+  - id: 7
+    dialogueText: "Oyes unos pasos acerc\xE1ndose lentamente al otro lado de la puerta,
+      y una voz aterciopelada te pregunta: \"\xBFQu\xE9 necesitas, querido?\". "
+    responses:
+    - responseText: "\"\xC1breme la puerta, por favor\""
+      nextNodeId: 13
+      associatedEvents: []
+    - responseText: "\"\xBFQui\xE9n eres?\""
+      nextNodeId: 14
+      associatedEvents: []
+    - responseText: "\"\xBFQu\xE9 es este sitio?\""
+      nextNodeId: 15
+      associatedEvents: []
+  - id: 8
+    dialogueText: "Corres hacia la luz, que te ciega cada vez m\xE1s. La presi\xF3n
+      que sientes en tu cabeza es insoportable. Un sonido chirriante te hace apretar
+      los dientes mientras avanzas hacia la luz cegadora. Cierras los ojos sin detenerte,
+      cuando los abres, te encuentras en un pasillo apenas iluminado que parece infinito.
+      A los laterales se suceden una serie de puertas numeradas. "
+    responses:
+    - responseText: 'Llamar a la puerta
+
+        de tu izquierda.'
+      nextNodeId: 16
+      associatedEvents: []
+    - responseText: 'Llamar a la puerta
+
+        de tu derecha.'
+      nextNodeId: 17
+      associatedEvents: []
+    - responseText: Seguir avanzando.
+      nextNodeId: 18
+      associatedEvents: []
+    - responseText: Dar media vuelta.
+      nextNodeId: 19
+      associatedEvents: []
+  - id: 9
+    dialogueText: "Abres el armario y encuentras una linterna. La enciendes e iluminas
+      la cueva. Est\xE1 completamente vac\xEDa exceptuando el armario. "
+    responses:
+    - responseText: Iluminas tu camino hacia la tenue luz.
+      nextNodeId: 20
       associatedEvents: []
