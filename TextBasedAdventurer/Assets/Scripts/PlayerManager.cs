@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         inventory = new List<string>();
-        health = 100;
+        health = 120;
     }
 
     public void AddItem(string item)

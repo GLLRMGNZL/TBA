@@ -133,4 +133,5 @@ MonoBehaviour:
     responses:
     - responseText: Iluminas tu camino hacia la tenue luz.
       nextNodeId: 20
-      associatedEvents: []
+      associatedEvents:
+      - end/Dead
