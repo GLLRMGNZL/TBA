@@ -2438,6 +2438,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
     group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: MouseClick
+    clip: {fileID: 8300000, guid: d73f039c0d787db49b14822fbe832e5c, type: 3}
+    volume: 0.685
+    pitch: 1.26
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
 --- !u!1 &1382389543
 GameObject:
   m_ObjectHideFlags: 0

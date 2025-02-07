@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Cursor.SetCursor(cursorArrowUpdate, Vector2.zero, CursorMode.ForceSoftware);
+            AudioManager.instance.Play("MouseClick");
         }
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
