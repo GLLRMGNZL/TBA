@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
         }
         else
         {
@@ -25,6 +26,20 @@ public class GameManager : MonoBehaviour
     #endregion
 
     public Animator transition;
+    public Texture2D cursorArrow;
+    public Texture2D cursorArrowUpdate;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Cursor.SetCursor(cursorArrowUpdate, Vector2.zero, CursorMode.ForceSoftware);
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
+        }
+    }
 
     // Change scene
     public void ReturnToMenu()
