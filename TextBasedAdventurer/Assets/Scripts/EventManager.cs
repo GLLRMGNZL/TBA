@@ -27,6 +27,10 @@ public class EventManager : MonoBehaviour
                 ChangeHealth(strings[1]);
                 break;
 
+            case "end":
+                Ending(strings[1]);
+                break;
+
             default: break;
         }
     }
@@ -54,5 +58,15 @@ public class EventManager : MonoBehaviour
     {
         PlayerManager.instance.ChangeHealth(int.Parse(health));
         Debug.Log("Player health: " + PlayerManager.instance.GetHealth());
+    }
+
+    private void Ending(string end)
+    {
+        Debug.Log("End of game." + " You finished with ending: " + end);
+        // Stop music and effects and play corresponding sound
+        // Hide AdventureText, responses and BackToMainMenu button and animate Kid Panel with corresponding ending (Panel moves to the center of the screen)
+        // Show corresponding ending text above Kid Panel character by character
+        // Show THE END text under Kid Panel
+        // Show BackToMainMenu button
     }
 }

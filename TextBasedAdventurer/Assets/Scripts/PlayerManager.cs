@@ -26,9 +26,9 @@ public class PlayerManager : MonoBehaviour
 
 
     // Game preferences
-    private float masterVolume = 150f;
-    private float musicVolume = 150f;
-    private float effectsVolume = 150f;
+    private float masterVolume = 0f;
+    private float musicVolume = 0f;
+    private float effectsVolume = 0f;
 
     // Player mechanics
     private List<string> inventory;

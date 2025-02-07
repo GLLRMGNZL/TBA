@@ -12,18 +12,8 @@ public class OptionsMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerManager.instance.GetMasterVolume() != 150f)
-        {
-            masterSlider.value = PlayerManager.instance.GetMasterVolume();
-        }
-        if (PlayerManager.instance.GetMusicVolume() != 150f)
-        {
-            musicSlider.value = PlayerManager.instance.GetMusicVolume();
-        }
-        if (PlayerManager.instance.GetEffectsVolume() != 150f)
-        {
-            effectsSlider.value = PlayerManager.instance.GetEffectsVolume();
-        }
+        masterSlider.value = PlayerManager.instance.GetMasterVolume();
+        musicSlider.value = PlayerManager.instance.GetMusicVolume();
+        effectsSlider.value = PlayerManager.instance.GetEffectsVolume();
     }
-
 }
