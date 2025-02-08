@@ -1845,7 +1845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 267.48, y: -255.78998}
+  m_AnchoredPosition: {x: 267.48, y: -255.79}
   m_SizeDelta: {x: -534.9585, y: -560.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848066526
@@ -2176,8 +2176,15 @@ MonoBehaviour:
   textManager: {fileID: 626290828}
   sprites:
   - {fileID: 21300000, guid: 21747fd8b767ffc4787bf191e91c471c, type: 3}
-  - {fileID: 21300000, guid: bff8a3e6e80e8e24d8bc4a3ed34f46f3, type: 3}
-  - {fileID: 21300000, guid: 939f8915b30c747499fe65f59f9777a7, type: 3}
+  - {fileID: 21300000, guid: 9588c7255ad020745b468df63df6a5f5, type: 3}
+  - {fileID: 21300000, guid: 01ad8106733c89e48bfad3eeaf2a069d, type: 3}
+  - {fileID: 21300000, guid: 375d3a4ce7638664b924f2a02a4a1e01, type: 3}
+  - {fileID: 21300000, guid: 640af9a5d42f39941b60efe0f4d95381, type: 3}
+  - {fileID: 21300000, guid: e344965326f583e41b33d93081d81dff, type: 3}
+  - {fileID: 21300000, guid: b4bdccdfc9ef0914894b179dfd57e1b4, type: 3}
+  - {fileID: 21300000, guid: f6c5e9dafc850734ca65c4c9f92c544a, type: 3}
+  - {fileID: 21300000, guid: 3c29664f41054ac4b91e86e0a46c3f85, type: 3}
+  - {fileID: 21300000, guid: d4e05b1daf0199c4485543dcd1243d6e, type: 3}
   image: {fileID: 2063809296}
   gameObjectsToDissapear:
   - {fileID: 1361772494}

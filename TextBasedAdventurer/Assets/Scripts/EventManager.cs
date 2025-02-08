@@ -82,6 +82,7 @@ public class EventManager : MonoBehaviour
                 ChangeToSprite("CaveKid6");
                 break;
             case 0:
+                ChangeToSprite("CaveKid10");
                 Ending("Dead");
                 break;
             default : break;
@@ -105,14 +106,25 @@ public class EventManager : MonoBehaviour
                 caveKidPanelAnimator.SetBool("isEnding", true);
                 buttonParentAnimator.SetBool("isClosed", true);
                 // Animation Cave Kid eye falls + eye fall sound
-                // Show corresponding ending text above Kid Panel character by character
-                StartCoroutine(textManager.TypeEndText(endingText));
-                endingTextAnimator.SetBool("isOpen", true);
                 // Show THE END text under Kid Panel
-                // Show BackToMainMenu button
-                
+                endingTextAnimator.SetBool("isOpen", true);
+                StartCoroutine(ShowUIAfterTextCoroutine());
                 break;
             default: break;
         }
+    }
+
+    private IEnumerator ShowUIAfterTextCoroutine()
+    {
+        // Type ending text
+        yield return StartCoroutine(textManager.TypeEndText(endingText));
+        // Show BackToMainMenu button
+        gameObjectsToDissapear[1].SetActive(true);
+    }
+
+    private IEnumerator animateDeath(string spriteName)
+    {
+
+        yield return new WaitForSeconds(0.5f);
     }
 }
