@@ -34,6 +34,7 @@ public class TextManager : MonoBehaviour
     public ScrollRect scrollRect;
     public float typeSpeed = 0.5f;
     public GameObject responseButtonPrefab;
+    public GameObject theEndText;
     public Transform responseButtonContainer;
     public EventManager eventManager;
     private string fullText;
@@ -147,5 +148,20 @@ public class TextManager : MonoBehaviour
         }
         if (isTyping) isTyping = false;
         GenerateResponseButtons(node);
+    }
+
+    public IEnumerator TypeEndText(TextMeshProUGUI endText)
+    {
+        string textToWrite = endText.text;
+        Debug.Log(textToWrite);
+        endText.text = "";
+
+        foreach (char character in textToWrite)
+        {
+            endText.text += character;
+            AudioManager.instance.Play("TypeCharacter");
+            yield return new WaitForSeconds(typeSpeed);
+        }
+        theEndText.SetActive(true);
     }
 }

@@ -7,12 +7,14 @@ using static UnityEditor.Progress;
 
 public class EventManager : MonoBehaviour
 {
+    public TextManager textManager;
     public Sprite[] sprites;
     public Image image;
     public GameObject[] gameObjectsToDissapear;
     public TextMeshProUGUI endingText;
-    public TextMeshProUGUI theEndText;
-    public Animator caveKidPanel;
+    public Animator caveKidPanelAnimator;
+    public Animator buttonParentAnimator;
+    public Animator endingTextAnimator;
 
     public void ExecuteEvent(string eventName){
 
@@ -98,13 +100,17 @@ public class EventManager : MonoBehaviour
                 for (int i = 0; i < gameObjectsToDissapear.Length; i++)
                 {
                     gameObjectsToDissapear[i].SetActive(false);
+                    Debug.Log(gameObjectsToDissapear[i]);
                 }
-                caveKidPanel.SetBool("isEnding", true);
+                caveKidPanelAnimator.SetBool("isEnding", true);
+                buttonParentAnimator.SetBool("isClosed", true);
                 // Animation Cave Kid eye falls + eye fall sound
                 // Show corresponding ending text above Kid Panel character by character
+                StartCoroutine(textManager.TypeEndText(endingText));
+                endingTextAnimator.SetBool("isOpen", true);
                 // Show THE END text under Kid Panel
                 // Show BackToMainMenu button
-                gameObjectsToDissapear[2].SetActive(true);
+                
                 break;
             default: break;
         }
