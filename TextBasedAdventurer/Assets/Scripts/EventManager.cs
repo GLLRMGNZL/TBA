@@ -9,6 +9,8 @@ public class EventManager : MonoBehaviour
 {
     public TextManager textManager;
     public Sprite[] sprites;
+    public Sprite[] deathSprites;
+    public float deathAnimSpeed;
     public Image image;
     public GameObject[] gameObjectsToDissapear;
     public TextMeshProUGUI endingText;
@@ -82,7 +84,6 @@ public class EventManager : MonoBehaviour
                 ChangeToSprite("CaveKid6");
                 break;
             case 0:
-                ChangeToSprite("CaveKid10");
                 Ending("Dead");
                 break;
             default : break;
@@ -103,6 +104,7 @@ public class EventManager : MonoBehaviour
                     gameObjectsToDissapear[i].SetActive(false);
                     Debug.Log(gameObjectsToDissapear[i]);
                 }
+                StartCoroutine(animateDeath());
                 caveKidPanelAnimator.SetBool("isEnding", true);
                 buttonParentAnimator.SetBool("isClosed", true);
                 // Animation Cave Kid eye falls + eye fall sound
@@ -122,9 +124,12 @@ public class EventManager : MonoBehaviour
         gameObjectsToDissapear[1].SetActive(true);
     }
 
-    private IEnumerator animateDeath(string spriteName)
+    private IEnumerator animateDeath()
     {
-
-        yield return new WaitForSeconds(0.5f);
+        foreach(Sprite s in deathSprites)
+        {
+            image.sprite = s;
+            yield return new WaitForSeconds(deathAnimSpeed);
+        }
     }
 }
