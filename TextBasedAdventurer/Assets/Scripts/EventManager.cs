@@ -10,7 +10,9 @@ public class EventManager : MonoBehaviour
     public TextManager textManager;
     public Sprite[] sprites;
     public Sprite[] deathSprites;
+    public Sprite[] goodEndingSprites;
     public float deathAnimSpeed;
+    public float goodEndingAnimSpeed;
     public Image image;
     public GameObject[] gameObjectsToDissapear;
     public TextMeshProUGUI endingText;
@@ -112,6 +114,8 @@ public class EventManager : MonoBehaviour
                 endingTextAnimator.SetBool("isOpen", true);
                 StartCoroutine(ShowUIAfterTextCoroutine());
                 break;
+            case "GoodEnd":
+                break;
             default: break;
         }
     }
@@ -127,6 +131,15 @@ public class EventManager : MonoBehaviour
     private IEnumerator animateDeath()
     {
         foreach(Sprite s in deathSprites)
+        {
+            image.sprite = s;
+            yield return new WaitForSeconds(deathAnimSpeed);
+        }
+    }
+
+    private IEnumerator animateGoodEnding()
+    {
+        foreach (Sprite s in goodEndingSprites)
         {
             image.sprite = s;
             yield return new WaitForSeconds(deathAnimSpeed);
