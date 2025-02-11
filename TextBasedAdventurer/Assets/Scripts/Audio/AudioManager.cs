@@ -69,18 +69,21 @@ public class AudioManager : MonoBehaviour
     // Audio settings
     public void setMasterVolume(float volume)
     {
+        if (volume <= -30) volume = -80;
         audioMixer.SetFloat("masterVolume", volume);
         PlayerManager.instance.SetMasterVolume(volume);
     }
 
     public void setMusicVolume(float volume)
     {
+        if (volume <= -30) volume = -80;
         audioMixer.SetFloat("musicVolume", volume);
         PlayerManager.instance.SetMusicVolume(volume);
     }
 
     public void setEffectsVolume(float volume)
     {
+        if (volume <= -30) volume = -80;
         audioMixer.SetFloat("effectsVolume", volume);
         PlayerManager.instance.SetEffectsVolume(volume);
     }

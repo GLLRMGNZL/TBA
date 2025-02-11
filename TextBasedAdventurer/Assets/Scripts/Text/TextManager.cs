@@ -34,6 +34,7 @@ public class TextManager : MonoBehaviour
     public ScrollRect scrollRect;
     public float typeSpeed = 0.5f;
     public GameObject responseButtonPrefab;
+    public GameObject textView;
     public GameObject theEndText;
     public Transform responseButtonContainer;
     public EventManager eventManager;
@@ -138,7 +139,7 @@ public class TextManager : MonoBehaviour
             // It ensures we always see last text written
             scrollRect.verticalNormalizedPosition = 0f;
 
-            if (!isTyping)
+            if (!isTyping || textView.activeSelf == false)
             {
                 dialogueText.text = previousText + fullText;
                 Canvas.ForceUpdateCanvases();

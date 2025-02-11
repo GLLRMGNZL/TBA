@@ -29,7 +29,8 @@ MonoBehaviour:
     responses:
     - responseText: Correr hacia la luz.
       nextNodeId: 3
-      associatedEvents: []
+      associatedEvents:
+      - health/-120
     - responseText: Gritar pidiendo ayuda.
       nextNodeId: 4
       associatedEvents: []
@@ -46,7 +47,8 @@ MonoBehaviour:
     responses:
     - responseText: Abrir la puerta.
       nextNodeId: 6
-      associatedEvents: []
+      associatedEvents:
+      - health/-20
     - responseText: Llamar a la puerta.
       nextNodeId: 7
       associatedEvents: []

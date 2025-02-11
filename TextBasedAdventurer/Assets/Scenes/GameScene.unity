@@ -1057,6 +1057,7 @@ MonoBehaviour:
   scrollRect: {fileID: 1361772496}
   typeSpeed: 0.05
   responseButtonPrefab: {fileID: 6391618954740924633, guid: 13c8fbba4dca8b744bb6e1800f9ac0e6, type: 3}
+  textView: {fileID: 1361772494}
   theEndText: {fileID: 1318023003}
   responseButtonContainer: {fileID: 166776449}
   eventManager: {fileID: 2080189321}
@@ -1845,7 +1846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 267.48, y: -255.79}
+  m_AnchoredPosition: {x: 267.48, y: -255.78998}
   m_SizeDelta: {x: -534.9585, y: -560.8729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848066526
