@@ -104,10 +104,10 @@ public class EventManager : MonoBehaviour
                     gameObjectsToDissapear[i].SetActive(false);
                     Debug.Log(gameObjectsToDissapear[i]);
                 }
+                // Animation Cave Kid eye falls + eye fall sound
                 StartCoroutine(animateDeath());
                 caveKidPanelAnimator.SetBool("isEnding", true);
                 buttonParentAnimator.SetBool("isClosed", true);
-                // Animation Cave Kid eye falls + eye fall sound
                 // Show THE END text under Kid Panel
                 endingTextAnimator.SetBool("isOpen", true);
                 StartCoroutine(ShowUIAfterTextCoroutine());

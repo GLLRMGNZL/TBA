@@ -30,7 +30,7 @@ MonoBehaviour:
     - responseText: Correr hacia la luz.
       nextNodeId: 3
       associatedEvents:
-      - health/-120
+      - health/-20
     - responseText: Gritar pidiendo ayuda.
       nextNodeId: 4
       associatedEvents: []
@@ -135,5 +135,131 @@ MonoBehaviour:
     responses:
     - responseText: Iluminas tu camino hacia la tenue luz.
       nextNodeId: 20
-      associatedEvents:
-      - end/Dead
+      associatedEvents: []
+  - id: 10
+    dialogueText: "Ignoras el armario y avanzas poco a poco por la cueva. Te topas
+      con un obst\xE1culo, pero lo haces a tiempo para no tropezarte con \xE9l. Te
+      encuentras delante de la puerta "
+    responses:
+    - responseText: Llamar a la puerta.
+      nextNodeId: 7
+      associatedEvents: []
+  - id: 11
+    dialogueText: "El fogonazo te ciega, pero sigues avanzando r\xE1pidamente. La
+      estancia parece no acabar nunca. Tropiezas con algo y, al caer, oyes una risa
+      burlona y una puerta cerr\xE1ndose tras de ti. "
+    responses:
+    - responseText: "\"\xBFQui\xE9n anda ah\xED?\""
+      nextNodeId: 22
+      associatedEvents: []
+    - responseText: 'Te levantas y, a ciegas, te diriges hacia la puerta. '
+      nextNodeId: 23
+      associatedEvents: []
+    - responseText: 'Te levantas y sigues avanzando a ciegas. '
+      nextNodeId: 24
+      associatedEvents: []
+  - id: 12
+    dialogueText: "Te das la vuelta para volver por donde has venido, pero la puerta
+      que atravesaste ya no existe. La oscuridad te envuelve y la presi\xF3n se hace
+      insoportable. "
+    responses:
+    - responseText: "Sucumbir a la desesperaci\xF3n."
+      nextNodeId: 25
+      associatedEvents: []
+  - id: 13
+    dialogueText: "Pides a la persona al otro lado de la puerta que la abra. Le escuchas
+      decir \"\xBFPor qu\xE9 har\xEDa eso?\". "
+    responses:
+    - responseText: "\"Por favor, tengo miedo y la cabeza me est\xE1 matando.\""
+      nextNodeId: 26
+      associatedEvents: []
+    - responseText: "\"\xBFY por qu\xE9 no lo har\xEDas? S\xE1came de aqu\xED ahora
+        mismo.\""
+      nextNodeId: 25
+      associatedEvents: []
+  - id: 14
+    dialogueText: "\"Soy la presi\xF3n de tu cabeza, soy un trabajador haciendo su
+      trabajo.\""
+    responses:
+    - responseText: "\"Necesito salir de aqu\xED.\""
+      nextNodeId: 28
+      associatedEvents: []
+    - responseText: '"Necesito saber donde estoy."'
+      nextNodeId: 29
+      associatedEvents: []
+    - responseText: "Si eres la presi\xF3n de mi cabeza,\nnecesito que desaparezcas."
+      nextNodeId: 30
+      associatedEvents: []
+  - id: 15
+    dialogueText: "\"Para algunos este sitio es un refugio. Para otros una prisi\xF3n
+      y, para m\xED, es un lugar de trabajo.\" "
+    responses:
+    - responseText: "\"\xBFPor qu\xE9 eres tan cr\xEDptico?\nNo suenas interesante,\npareces
+        imb\xE9cil.\""
+      nextNodeId: 31
+      associatedEvents: []
+    - responseText: "\"\xBFUna prisi\xF3n?\""
+      nextNodeId: 29
+      associatedEvents: []
+    - responseText: "\"\xBFUn refugio?\""
+      nextNodeId: 33
+      associatedEvents: []
+  - id: 16
+    dialogueText: 'Llamas a la puerta. Estaba abierta y la empujas con tus golpes.
+      Una luz ilumina la estancia al otro lado. '
+    responses:
+    - responseText: Entrar.
+      nextNodeId: 34
+      associatedEvents: []
+    - responseText: "\"\xBFHola? \xBFHay alguien ah\xED?\""
+      nextNodeId: 35
+      associatedEvents: []
+  - id: 17
+    dialogueText: 'Llamas a la puerta cerrada. No recibes respuesta. '
+    responses:
+    - responseText: Insistir.
+      nextNodeId: 36
+      associatedEvents: []
+    - responseText: Dar media vuelta y llamar a la puerta de la izquierda.
+      nextNodeId: 37
+      associatedEvents: []
+  - id: 18
+    dialogueText: "Toda tu boca cruje y el dolor te apabulla. La presi\xF3n hace
+      que tus o\xEDdos sangren y el sonido chirriante es lo \xFAnico que oyes mientras
+      avanzas a toda prisa. Las puertas se suceden a los laterales, todas cerradas;
+      y el cansancio empieza a hacer mella en tu cuerpo. "
+    responses:
+    - responseText: "Ignoras el dolor y el cansancio y contin\xFAas corriendo por
+        alguna raz\xF3n."
+      nextNodeId: 38
+      associatedEvents: []
+    - responseText: "Te detienes y gritas de dolor. Cualquiera lo entender\xEDa como
+        una llamada de auxilio."
+      nextNodeId: 39
+      associatedEvents: []
+  - id: 19
+    dialogueText: "Te das media vuelta y descubres que la puerta por la qu entraste
+      ya no est\xE1. El pasillo se extiende en esa direcci\xF3n una distancia que
+      parece infinita. Entonces, las luces que lo iluminan se apagan de golpe, y
+      todo queda oscuro. La presi\xF3n aumenta y el p\xE1nico te atrapa."
+    responses:
+    - responseText: "Avanzas convencido de que encontrar\xE1s la salida en esa direcci\xF3n."
+      nextNodeId: 40
+      associatedEvents: []
+    - responseText: Vuelves a darte la vuelta para seguir avanzando.
+      nextNodeId: 41
+      associatedEvents: []
+    - responseText: "La desesperaci\xF3n te hace gritar con todas tus fuerzas. Cualquiera
+        lo entender\xEDa como una llamada de auxilio."
+      nextNodeId: 39
+      associatedEvents: []
+  - id: 20
+    dialogueText: Avanzas hacia la fuente de luz. Es una puerta cerrada que deja
+      ver una fuente de luz al otro lado.
+    responses:
+    - responseText: Abrir la puerta.
+      nextNodeId: 42
+      associatedEvents: []
+    - responseText: Llamar a la puerta.
+      nextNodeId: 7
+      associatedEvents: []
