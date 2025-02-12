@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be359de955bd9104a8d1604d5cd8944c, type: 3}
-  m_Name: Adventure1
+  m_Name: AdventureSpanish
   m_EditorClassIdentifier: 
   rootNode:
     id: 1

@@ -95,26 +95,14 @@ public class EventManager : MonoBehaviour
 
     private void Ending(string end)
     {
-        Debug.Log("End of game." + " You finished with ending: " + end);
+        Debug.Log("End of game. You finished with ending: " + end);
         switch (end)
         {
             case "Dead":
-                // Stop music and effects and play corresponding sound
-                // Hide AdventureText, responses and BackToMainMenu button and animate Kid Panel with corresponding ending (Panel moves to the center of the screen)
-                for (int i = 0; i < gameObjectsToDissapear.Length; i++)
-                {
-                    gameObjectsToDissapear[i].SetActive(false);
-                    Debug.Log(gameObjectsToDissapear[i]);
-                }
-                // Animation Cave Kid eye falls + eye fall sound
-                StartCoroutine(animateDeath());
-                caveKidPanelAnimator.SetBool("isEnding", true);
-                buttonParentAnimator.SetBool("isClosed", true);
-                // Show THE END text under Kid Panel
-                endingTextAnimator.SetBool("isOpen", true);
-                StartCoroutine(ShowUIAfterTextCoroutine());
+                UIEnding("dead");
                 break;
             case "GoodEnd":
+                UIEnding("goodEnding");
                 break;
             default: break;
         }
@@ -144,5 +132,41 @@ public class EventManager : MonoBehaviour
             image.sprite = s;
             yield return new WaitForSeconds(deathAnimSpeed);
         }
+    }
+
+    private void UIEnding(string ending)
+    {
+        // Stop music and effects and play corresponding sound
+        AudioManager.instance.Stop("Theme");
+        // Hide AdventureText, responses and BackToMainMenu button and animate Kid Panel with corresponding ending (Panel moves to the center of the screen)
+        for (int i = 0; i < gameObjectsToDissapear.Length; i++)
+        {
+            gameObjectsToDissapear[i].SetActive(false);
+            Debug.Log(gameObjectsToDissapear[i]);
+        }
+        // Animation Cave Kid eye falls + eye fall sound
+        if (ending == "dead")
+        {
+            // Play death theme
+            AudioManager.instance.Play("Death");
+            // TODO: endingText = death Text
+            endingText.text = "Texto predeterminado para final en el que Cave Kid muere.";
+            // Show death animation
+            StartCoroutine(animateDeath());
+        }
+        if (ending == "goodEnding") 
+        {
+            // Play good ending theme
+            AudioManager.instance.Play("GoodEnding");
+            // TODO: endingText = good Ending Text
+            endingText.text = "Texto predeterminado para final en el que Cave Kid logra escapar.";
+            // Show good ending animation
+            StartCoroutine(animateGoodEnding()); 
+        }
+        caveKidPanelAnimator.SetBool("isEnding", true);
+        buttonParentAnimator.SetBool("isClosed", true);
+        // Show THE END text under Kid Panel
+        endingTextAnimator.SetBool("isOpen", true);
+        StartCoroutine(ShowUIAfterTextCoroutine());
     }
 }
