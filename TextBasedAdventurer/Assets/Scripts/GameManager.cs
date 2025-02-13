@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public Animator transition;
     public Texture2D cursorArrow;
     public Texture2D cursorArrowUpdate;
+    public string language = "spanish";
 
     private void Update()
     {

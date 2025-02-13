@@ -779,6 +779,7 @@ MonoBehaviour:
   transition: {fileID: 37177324}
   cursorArrow: {fileID: 2800000, guid: 0e8a7e8e0d22892408c151de73a6f562, type: 3}
   cursorArrowUpdate: {fileID: 2800000, guid: cb7cc8e6ee0478045b3ff0d0dd93fa01, type: 3}
+  language: spanish
 --- !u!4 &310906662
 Transform:
   m_ObjectHideFlags: 0
