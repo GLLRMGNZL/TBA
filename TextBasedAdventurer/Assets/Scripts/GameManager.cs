@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     // Change scene
     public void ReturnToMenu()
     {
+        AudioManager.instance.Play("Theme");
         Debug.Log("ReturnToMenu called");
         StartCoroutine(LoadLevel(0));
     }
