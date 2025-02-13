@@ -56,12 +56,14 @@ public class EventManager : MonoBehaviour
             }
         }
         // Play damage sound
+        AudioManager.instance.Play("damage");
         Debug.Log("Sprite activo " + sprite);
     }
 
     private void AddItem(string item)
     {
         PlayerManager.instance.AddItem(item);
+        AudioManager.instance.Play("success");
         Debug.Log("Item " + item + " añadido al inventario del jugador");
     }
 
@@ -147,7 +149,9 @@ public class EventManager : MonoBehaviour
         // Animation Cave Kid eye falls + eye fall sound
         if (ending == "dead")
         {
-            // Play death theme
+            // Play death theme and eye falls
+            AudioManager.instance.Play("EyeFalls");
+            AudioManager.instance.Stop("Theme");
             AudioManager.instance.Play("Death");
             // TODO: endingText = death Text
             endingText.text = "Texto predeterminado para final en el que Cave Kid muere.";
@@ -157,6 +161,8 @@ public class EventManager : MonoBehaviour
         if (ending == "goodEnding") 
         {
             // Play good ending theme
+            AudioManager.instance.Play("Success");
+            AudioManager.instance.Stop("Theme");
             AudioManager.instance.Play("GoodEnding");
             // TODO: endingText = good Ending Text
             endingText.text = "Texto predeterminado para final en el que Cave Kid logra escapar.";
