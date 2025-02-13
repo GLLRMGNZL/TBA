@@ -2190,9 +2190,36 @@ MonoBehaviour:
   - {fileID: 131060535, guid: 7996e160e8ada2b469cd4a0faefefaab, type: 3}
   - {fileID: -626883696, guid: 7996e160e8ada2b469cd4a0faefefaab, type: 3}
   - {fileID: 2126008934, guid: 7996e160e8ada2b469cd4a0faefefaab, type: 3}
-  goodEndingSprites: []
+  goodEndingSprites:
+  - {fileID: 21300000, guid: 32c20db22b8a6eb48b8efb4413f41ac6, type: 3}
+  - {fileID: 21300000, guid: fd5e8191e0eca2440b67431d6076f7a8, type: 3}
+  - {fileID: 21300000, guid: 830e09fca109f7c45b2485b95e51a6ea, type: 3}
+  - {fileID: 21300000, guid: b8b26d1ff52b572429835babbb82c2ff, type: 3}
+  - {fileID: 21300000, guid: 619df12e2fea50a4a961c5ca15ac983d, type: 3}
+  - {fileID: 21300000, guid: fd5e8191e0eca2440b67431d6076f7a8, type: 3}
+  - {fileID: 21300000, guid: 3b16b4533e65e6745bbb4a449ff1dfd1, type: 3}
+  - {fileID: 21300000, guid: 816b4382427e4d0479c95e2681e9d94f, type: 3}
+  - {fileID: 21300000, guid: 830e09fca109f7c45b2485b95e51a6ea, type: 3}
+  - {fileID: 21300000, guid: c914a43bd38720a4189f00876ef07ef8, type: 3}
+  - {fileID: 21300000, guid: e1c93ffccdc5e33499846e86d0878104, type: 3}
+  - {fileID: 21300000, guid: 94130af6208629d4cb1dfe7badcf76cd, type: 3}
+  - {fileID: 21300000, guid: 4f70770b57f47cb49808eb69b8ab1aa0, type: 3}
+  - {fileID: 21300000, guid: e250953131f1f4b4e80a3a97bfd2d2e8, type: 3}
+  - {fileID: 21300000, guid: 96fff26a4cd1fa541ae906e89003bf34, type: 3}
+  - {fileID: 21300000, guid: 618ff518ab10abf49acfd7e408954c0c, type: 3}
+  - {fileID: 21300000, guid: e468aa89df2f2dd47930b22ce75e6bdd, type: 3}
+  - {fileID: 21300000, guid: a20865d1d37975b458a4bc3876bcda34, type: 3}
+  - {fileID: 21300000, guid: 816b4382427e4d0479c95e2681e9d94f, type: 3}
+  - {fileID: 21300000, guid: 51089c000664417488f2bbee643f0ceb, type: 3}
+  - {fileID: 21300000, guid: 28e1a9362c712a84facd7c5e51c58201, type: 3}
+  - {fileID: 21300000, guid: 237b026c7ed953f4793c664395d1cc61, type: 3}
+  - {fileID: 21300000, guid: 9a93ba329a020394abe04abde49329e8, type: 3}
+  - {fileID: 21300000, guid: da5eaa05a3a944d40b8f54854fba2ea8, type: 3}
+  - {fileID: 21300000, guid: a67e7a69852a45b42ba347455e45e48e, type: 3}
+  - {fileID: 21300000, guid: 7aa27f7abab567b4f95b1d92758a075f, type: 3}
+  - {fileID: 21300000, guid: 7601758460ec8814093b83d28727213f, type: 3}
   deathAnimSpeed: 0.09
-  goodEndingAnimSpeed: 0
+  goodEndingAnimSpeed: 0.72
   image: {fileID: 2063809296}
   gameObjectsToDissapear:
   - {fileID: 1361772494}

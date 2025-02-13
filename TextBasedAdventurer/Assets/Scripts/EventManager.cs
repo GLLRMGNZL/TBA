@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class EventManager : MonoBehaviour
 {
@@ -132,7 +131,7 @@ public class EventManager : MonoBehaviour
         foreach (Sprite s in goodEndingSprites)
         {
             image.sprite = s;
-            yield return new WaitForSeconds(deathAnimSpeed);
+            yield return new WaitForSeconds(goodEndingAnimSpeed);
         }
     }
 

@@ -61,13 +61,16 @@ MonoBehaviour:
     responses:
     - responseText: Ir hacia la luz.
       nextNodeId: 8
-      associatedEvents: []
+      associatedEvents:
+      - end/GoodEnd
     - responseText: Ir hacia la luz.
       nextNodeId: 8
-      associatedEvents: []
+      associatedEvents:
+      - end/GoodEnd
     - responseText: Ir hacia la luz.
       nextNodeId: 8
-      associatedEvents: []
+      associatedEvents:
+      - end/GoodEnd
   - id: 5
     dialogueText: "Con paciencia, examinas la cueva mientras tus ojos se acostumbran
       cada vez m\xE1s a la oscuridad. Entre las tinieblas, encuentras un armario.
