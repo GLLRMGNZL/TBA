@@ -2468,6 +2468,27 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
     group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: TakeDamage
+    clip: {fileID: 8300000, guid: cfeb5df3bb1e7924f9d9f77f1b03b960, type: 3}
+    volume: 0.685
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: EyeFalls
+    clip: {fileID: 8300000, guid: b1c5101275e731a47a1899d49ec678b3, type: 3}
+    volume: 1.2
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: MoonCrunch
+    clip: {fileID: 8300000, guid: 7f8128dfba8a4f343bdcf545e2dff3d2, type: 3}
+    volume: 0.74
+    pitch: 0.94
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
 --- !u!1 &1382389543
 GameObject:
   m_ObjectHideFlags: 0
