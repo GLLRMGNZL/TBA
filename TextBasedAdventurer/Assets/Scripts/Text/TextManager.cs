@@ -9,7 +9,7 @@ public class TextManager : MonoBehaviour
 {
 
     #region Singleton
-    public static TextManager Instance {  get; private set; }
+    public static TextManager Instance { get; private set; }
     private void Awake()
     {
 
@@ -126,7 +126,7 @@ public class TextManager : MonoBehaviour
     }
 
     // Coroutine writes text letter by letter
-    IEnumerator TypeText(DialogueNode node)
+    /*IEnumerator TypeText(DialogueNode node)
     {
         isTyping = true;
         string previousText = dialogueText.text;
@@ -148,6 +148,39 @@ public class TextManager : MonoBehaviour
             }
         }
         if (isTyping) isTyping = false;
+        GenerateResponseButtons(node);
+    }*/
+    IEnumerator TypeText(DialogueNode node)
+    {
+        isTyping = true;
+        string fullText = node.dialogueText;
+        string previousText = dialogueText.text; // Guarda el texto anterior para mantenerlo opaco
+        string visible = "";
+        string invisible = fullText;
+
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            // Construye el texto con el efecto de transparencia
+            visible += fullText[i];
+            invisible = invisible.Substring(1);
+
+            dialogueText.text = $"{previousText}<color=#FFFFFF>{visible}</color><color=#00000000>{invisible}</color>"; // Mantiene el texto anterior opaco
+
+            AudioManager.instance.Play("TypeCharacter"); // Reproduce el sonido de tipeo
+
+            yield return new WaitForSeconds(typeSpeed);
+
+            // Opción para saltar la animación
+            if (!isTyping || !gameObject.activeSelf)
+            {
+                dialogueText.text = previousText + fullText;
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+                break;
+            }
+        }
+
+        isTyping = false;
         GenerateResponseButtons(node);
     }
 
