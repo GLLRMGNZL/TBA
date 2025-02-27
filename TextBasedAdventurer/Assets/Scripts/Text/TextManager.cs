@@ -33,6 +33,7 @@ public class TextManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public ScrollRect scrollRect;
     public float typeSpeed = 0.5f;
+    public float scrollSpeed = 0.7f;
     public GameObject responseButtonPrefab;
     public GameObject textView;
     public GameObject theEndText;
@@ -167,6 +168,10 @@ public class TextManager : MonoBehaviour
             dialogueText.text = $"{previousText}<color=#FFFFFF>{visible}</color><color=#00000000>{invisible}</color>"; // Mantiene el texto anterior opaco
 
             AudioManager.instance.Play("TypeCharacter"); // Reproduce el sonido de tipeo
+
+            Canvas.ForceUpdateCanvases();
+            if (scrollRect.verticalNormalizedPosition > 0f)
+                scrollRect.verticalNormalizedPosition -= scrollSpeed * Time.deltaTime;
 
             yield return new WaitForSeconds(typeSpeed);
 

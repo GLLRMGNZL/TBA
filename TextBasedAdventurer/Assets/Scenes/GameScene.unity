@@ -902,10 +902,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1656811595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 351.9385, y: -135.705}
+  m_SizeDelta: {x: 699.877, y: 271.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590304775
 MonoBehaviour:
@@ -1056,6 +1056,7 @@ MonoBehaviour:
   dialogueText: {fileID: 590304775}
   scrollRect: {fileID: 1361772496}
   typeSpeed: 0.05
+  scrollSpeed: 0.7
   responseButtonPrefab: {fileID: 6391618954740924633, guid: 13c8fbba4dca8b744bb6e1800f9ac0e6, type: 3}
   textView: {fileID: 1361772494}
   theEndText: {fileID: 1318023003}
@@ -1616,7 +1617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.71, y: -2.7099}
-  m_SizeDelta: {x: 753.45, y: 151.7104}
+  m_SizeDelta: {x: 753.45, y: 159.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361772496
 MonoBehaviour:

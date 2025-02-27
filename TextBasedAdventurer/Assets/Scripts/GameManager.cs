@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
+            Application.targetFrameRate = 60;
         }
         else
         {
