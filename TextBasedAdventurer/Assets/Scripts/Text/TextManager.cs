@@ -170,8 +170,9 @@ public class TextManager : MonoBehaviour
             AudioManager.instance.Play("TypeCharacter"); // Reproduce el sonido de tipeo
 
             Canvas.ForceUpdateCanvases();
-            if (scrollRect.verticalNormalizedPosition > 0f)
-                scrollRect.verticalNormalizedPosition -= scrollSpeed * Time.deltaTime;
+            //if (scrollRect.verticalNormalizedPosition > 0f)
+                //scrollRect.verticalNormalizedPosition -= scrollSpeed * Time.deltaTime;
+                StartCoroutine(ScrollDown());
 
             yield return new WaitForSeconds(typeSpeed);
 
@@ -202,5 +203,21 @@ public class TextManager : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }
         theEndText.SetActive(true);
+    }
+
+    private IEnumerator ScrollDown ()
+    {
+        float duration = 0.5f;
+        float elapsedTime = 0f;
+
+        float startY = scrollRect.verticalNormalizedPosition;
+        float targetY = 0f; // Queremos movernos hacia abajo
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            scrollRect.verticalNormalizedPosition = Mathf.Lerp(startY, targetY, elapsedTime * duration);
+            yield return null;
+        }
     }
 }
