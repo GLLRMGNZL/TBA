@@ -902,10 +902,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1656811595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 351.9385, y: -135.705}
-  m_SizeDelta: {x: 699.877, y: 271.41}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590304775
 MonoBehaviour:
@@ -1312,6 +1312,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f2a39b46b1386f048b4d22887ffc70ee, type: 3}
     volume: 0.201
     pitch: 0.75
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: MoonCrunch
+    clip: {fileID: 8300000, guid: 7f8128dfba8a4f343bdcf545e2dff3d2, type: 3}
+    volume: 0.36
+    pitch: 0.92
     loop: 0
     source: {fileID: 0}
     group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
@@ -2220,6 +2227,62 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a67e7a69852a45b42ba347455e45e48e, type: 3}
   - {fileID: 21300000, guid: 7aa27f7abab567b4f95b1d92758a075f, type: 3}
   - {fileID: 21300000, guid: 7601758460ec8814093b83d28727213f, type: 3}
+  goodEndingDelays:
+  - 2
+  - 2
+  - 4
+  - 3
+  - 1.5
+  - 3
+  - 1.4
+  - 1
+  - 2
+  - 1
+  - 0.8
+  - 0.6
+  - 0.4
+  - 0.6
+  - 1
+  - 1
+  - 1
+  - 1
+  - 6
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 3
+  goodEndingSounds:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - MoonCrunch
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   deathAnimSpeed: 0.09
   goodEndingAnimSpeed: 0.72
   image: {fileID: 2063809296}

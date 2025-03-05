@@ -60,15 +60,15 @@ MonoBehaviour:
       una luz radiante que te invita a salir de la cueva. "
     responses:
     - responseText: Ir hacia la luz.
-      nextNodeId: 8
+      nextNodeId: 56
       associatedEvents:
       - end/GoodEnd
     - responseText: Ir hacia la luz.
-      nextNodeId: 8
+      nextNodeId: 56
       associatedEvents:
       - end/GoodEnd
     - responseText: Ir hacia la luz.
-      nextNodeId: 8
+      nextNodeId: 56
       associatedEvents:
       - end/GoodEnd
   - id: 5

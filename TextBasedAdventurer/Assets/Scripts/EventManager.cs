@@ -10,6 +10,8 @@ public class EventManager : MonoBehaviour
     public Sprite[] sprites;
     public Sprite[] deathSprites;
     public Sprite[] goodEndingSprites;
+    public float[] goodEndingDelays;
+    public string[] goodEndingSounds;
     public float deathAnimSpeed;
     public float goodEndingAnimSpeed;
     public Image image;
@@ -128,11 +130,20 @@ public class EventManager : MonoBehaviour
 
     private IEnumerator animateGoodEnding()
     {
-        foreach (Sprite s in goodEndingSprites)
+        for (int i = 0; i < goodEndingSprites.Length; i++)
         {
-            image.sprite = s;
-            yield return new WaitForSeconds(goodEndingAnimSpeed);
+            image.sprite = goodEndingSprites[i];
+
+            if (!string.IsNullOrEmpty(goodEndingSounds[i]))
+            {
+                AudioManager.instance.Play(goodEndingSounds[i]);
+            }
+
+            yield return new WaitForSeconds(goodEndingDelays[i]);
         }
+        // Show THE END text under Kid Panel
+        endingTextAnimator.SetBool("isOpen", true);
+        StartCoroutine(ShowUIAfterTextCoroutine());
     }
 
     private void UIEnding(string ending)
@@ -170,8 +181,5 @@ public class EventManager : MonoBehaviour
         }
         caveKidPanelAnimator.SetBool("isEnding", true);
         buttonParentAnimator.SetBool("isClosed", true);
-        // Show THE END text under Kid Panel
-        endingTextAnimator.SetBool("isOpen", true);
-        StartCoroutine(ShowUIAfterTextCoroutine());
     }
 }
