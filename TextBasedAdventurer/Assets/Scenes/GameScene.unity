@@ -1056,7 +1056,7 @@ MonoBehaviour:
   dialogueText: {fileID: 590304775}
   scrollRect: {fileID: 1361772496}
   typeSpeed: 0.05
-  scrollSpeed: 0.7
+  scrollSpeed: 1
   responseButtonPrefab: {fileID: 6391618954740924633, guid: 13c8fbba4dca8b744bb6e1800f9ac0e6, type: 3}
   textView: {fileID: 1361772494}
   theEndText: {fileID: 1318023003}
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
-  m_DecelerationRate: 0.135
+  m_DecelerationRate: 0
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 247827708}
   m_HorizontalScrollbar: {fileID: 0}

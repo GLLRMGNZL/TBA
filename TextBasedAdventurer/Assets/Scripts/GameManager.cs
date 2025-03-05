@@ -53,14 +53,14 @@ public class GameManager : MonoBehaviour
     }
     public void NewGame()
     {
-        Debug.Log("NewGame called");
+        //Debug.Log("NewGame called");
         StartCoroutine(LoadLevel(1));
     }
 
     // Transition between scenes
     IEnumerator LoadLevel(int level)
     {
-        Debug.Log("LoadLevel" + level + " called");
+        //Debug.Log("LoadLevel" + level + " called");
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(1f);
