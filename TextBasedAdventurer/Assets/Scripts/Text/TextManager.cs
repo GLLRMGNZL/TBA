@@ -7,27 +7,6 @@ using System.Linq;
 
 public class TextManager : MonoBehaviour
 {
-
-    /*#region Singleton
-    public static TextManager instance { get; private set; }
-    private void Awake()
-    {
-
-        if (instance == null)
-        {
-            instance = this;
-
-            sentences = new Queue<string>();
-            dialogueText.text = "";
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
-    #endregion*/
-
     public Dialogue[] dialogues;
     public Dialogue currentDialogue;
     public TextMeshProUGUI dialogueText;
@@ -40,12 +19,12 @@ public class TextManager : MonoBehaviour
     public Transform responseButtonContainer;
     public EventManager eventManager;
     private string fullText;
-    private Queue<string> sentences = new Queue<string>();
+    //private Queue<string> sentences = new Queue<string>();
     private bool isTyping = false;
 
     private void OnEnable()
     {
-        sentences = new Queue<string>();
+        //sentences = new Queue<string>();
         dialogueText.text = "";
         string lang = PlayerManager.instance.language;
         Debug.Log(lang);

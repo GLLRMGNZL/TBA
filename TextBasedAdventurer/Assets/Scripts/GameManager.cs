@@ -21,10 +21,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            Destroy(instance);
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
     #endregion
 
