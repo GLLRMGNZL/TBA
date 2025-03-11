@@ -147,6 +147,9 @@ MonoBehaviour:
     - responseText: Llamar a la puerta.
       nextNodeId: 7
       associatedEvents: []
+    - responseText: Abrir la puerta con cautela.
+      nextNodeId: 21
+      associatedEvents: []
   - id: 11
     dialogueText: "El fogonazo te ciega, pero sigues avanzando r\xE1pidamente. La
       estancia parece no acabar nunca. Tropiezas con algo y, al caer, oyes una risa

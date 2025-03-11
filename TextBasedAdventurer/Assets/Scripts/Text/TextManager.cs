@@ -8,18 +8,17 @@ using System.Linq;
 public class TextManager : MonoBehaviour
 {
 
-    #region Singleton
-    public static TextManager Instance { get; private set; }
+    /*#region Singleton
+    public static TextManager instance { get; private set; }
     private void Awake()
     {
 
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
+
             sentences = new Queue<string>();
-            //fullText = currentDialogue.rootNode.dialogueText;
             dialogueText.text = "";
-            StartDialogue(currentDialogue.rootNode);
         }
         else
         {
@@ -27,8 +26,9 @@ public class TextManager : MonoBehaviour
             return;
         }
     }
-    #endregion
+    #endregion*/
 
+    public Dialogue[] dialogues;
     public Dialogue currentDialogue;
     public TextMeshProUGUI dialogueText;
     public ScrollRect scrollRect;
@@ -42,6 +42,26 @@ public class TextManager : MonoBehaviour
     private string fullText;
     private Queue<string> sentences = new Queue<string>();
     private bool isTyping = false;
+
+    private void OnEnable()
+    {
+        sentences = new Queue<string>();
+        dialogueText.text = "";
+        string lang = PlayerManager.instance.language;
+        Debug.Log(lang);
+
+        if (lang == "spanish")
+        {
+            currentDialogue = Resources.Load<Dialogue>("Texts/AdventureSpanish");
+
+        }
+        if (lang == "english")
+        {
+            currentDialogue = Resources.Load<Dialogue>("Texts/AdventureEnglish");
+        }
+
+        StartDialogue(currentDialogue.rootNode);
+    }
 
     private void Update()
     {
@@ -127,30 +147,6 @@ public class TextManager : MonoBehaviour
     }
 
     // Coroutine writes text letter by letter
-    /*IEnumerator TypeText(DialogueNode node)
-    {
-        isTyping = true;
-        string previousText = dialogueText.text;
-        foreach (char character in fullText)
-        {
-            dialogueText.text += character;
-            AudioManager.instance.Play("TypeCharacter");
-            yield return new WaitForSeconds(typeSpeed);
-
-            // It ensures we always see last text written
-            scrollRect.verticalNormalizedPosition = 0f;
-
-            if (!isTyping || textView.activeSelf == false)
-            {
-                dialogueText.text = previousText + fullText;
-                Canvas.ForceUpdateCanvases();
-                scrollRect.verticalNormalizedPosition = 0f;
-                break;
-            }
-        }
-        if (isTyping) isTyping = false;
-        GenerateResponseButtons(node);
-    }*/
     IEnumerator TypeText(DialogueNode node)
     {
         isTyping = true;

@@ -1,0 +1,528 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be359de955bd9104a8d1604d5cd8944c, type: 3}
+  m_Name: AdventureEnglish
+  m_EditorClassIdentifier: 
+  rootNode:
+    id: 1
+    dialogueText: "A cave in the darkness. Silence surrounds you, and you feel a
+      shiver run down your spine. You are lying on the ground; it is cold, or maybe
+      wet\u2014you wouldn\u2019t be able to tell the difference. "
+    responses:
+    - responseText: Get up.
+      nextNodeId: 2
+      associatedEvents: []
+  dialogueNodes:
+  - id: 2
+    dialogueText: "You feel your head pounding. It seems like it\u2019s going to
+      explode. Your eyes begin to adjust to the darkness as they feel like they\u2019re
+      popping out of their sockets, and in the distance, you think you can make out
+      a faint orange light. "
+    responses:
+    - responseText: Run towards the light.
+      nextNodeId: 3
+      associatedEvents:
+      - health/-20
+    - responseText: Shout for help.
+      nextNodeId: 4
+      associatedEvents: []
+    - responseText: Examine the rest of the cave.
+      nextNodeId: 5
+      associatedEvents: []
+  - id: 3
+    dialogueText: 'You run towards the light. The pressure in your head increases
+      as you stumble forward. You trip over a solid object and fall to the ground,
+      but the promise of the growing light urges you to keep moving. A shrill sound
+      joins it, making you clench your jaw. A door stands before you. Beyond it,
+      the mysterious source of light now appears daunting. '
+    responses:
+    - responseText: Open the door.
+      nextNodeId: 6
+      associatedEvents:
+      - health/-20
+    - responseText: Knock on the door.
+      nextNodeId: 7
+      associatedEvents: []
+  - id: 4
+    dialogueText: 'The sound of your voice echoes against the walls, making them
+      tremble. The intensity of your own echo shatters your ears. You squeeze your
+      eyes shut as your head is stabbed with pain... which ceases instantly. You
+      open your eyes, and what was once a faint light in the darkness is now a radiant
+      glow inviting you to leave the cave. '
+    responses:
+    - responseText: Walk towards the light.
+      nextNodeId: 56
+      associatedEvents:
+      - end/GoodEnd
+    - responseText: Walk towards the light.
+      nextNodeId: 56
+      associatedEvents:
+      - end/GoodEnd
+    - responseText: Walk towards the light.
+      nextNodeId: 56
+      associatedEvents:
+      - end/GoodEnd
+  - id: 5
+    dialogueText: 'Patiently, you examine the cave while your eyes continue to adjust
+      to the darkness. Among the shadows, you find a wardrobe. Additionally, in the
+      distance, the faint light seems to grow brighter. '
+    responses:
+    - responseText: Open the wardrobe.
+      nextNodeId: 9
+      associatedEvents:
+      - addItem/Lantern
+    - responseText: Run towards the light.
+      nextNodeId: 3
+      associatedEvents: []
+    - responseText: Cautiously advance towards the light source.
+      nextNodeId: 10
+      associatedEvents: []
+  - id: 6
+    dialogueText: 'You throw yourself at the door, opening it. As you do, the heavy
+      door strikes a lightbulb on the other side, shattering the light that guided
+      you here. '
+    responses:
+    - responseText: Keep moving forward despite everything.
+      nextNodeId: 11
+      associatedEvents: []
+    - responseText: Turn back.
+      nextNodeId: 12
+      associatedEvents: []
+  - id: 7
+    dialogueText: 'You hear footsteps slowly approaching on the other side of the
+      door, and a velvety voice asks, "What do you need, dear?". '
+    responses:
+    - responseText: '"Open the door for me, please."'
+      nextNodeId: 13
+      associatedEvents: []
+    - responseText: ' "Who are you?"'
+      nextNodeId: 14
+      associatedEvents: []
+    - responseText: What is this place?"
+      nextNodeId: 15
+      associatedEvents: []
+  - id: 8
+    dialogueText: 'You run towards the light, which blinds you as you move forward.
+      The pressure in your head is unbearable. A shrill sound makes you clench your
+      jaw as you advance towards the blinding glow. You close your eyes while moving
+      forward. When you open them, you find yourself in a seemingly endless corridor.
+      Numbered doors line the sides. 16. Knock on the door to your left. '
+    responses:
+    - responseText: 'Knock on the door
+
+        to your right.'
+      nextNodeId: 16
+      associatedEvents: []
+    - responseText: 'Knock on the door
+
+        to your left.'
+      nextNodeId: 17
+      associatedEvents: []
+    - responseText: Keep moving forward.
+      nextNodeId: 18
+      associatedEvents: []
+    - responseText: Turn back.
+      nextNodeId: 19
+      associatedEvents: []
+  - id: 9
+    dialogueText: 'You find a flashlight. You turn it on and illuminate the cave.
+      Completely empty. '
+    responses:
+    - responseText: Light your way towards the faint light.
+      nextNodeId: 20
+      associatedEvents: []
+  - id: 10
+    dialogueText: 'You ignore the wardrobe and slowly advance through the cave. You
+      bump into an obstacle, but it is small enough to step over without issue. You
+      find yourself in front of the door. '
+    responses:
+    - responseText: Knock on the door.
+      nextNodeId: 7
+      associatedEvents: []
+    - responseText: Cautiously open the door.
+      nextNodeId: 21
+      associatedEvents: []
+  - id: 11
+    dialogueText: 'The sudden flash blinds you, but you keep moving quickly. The
+      space seems endless. You trip over something, and as you fall, you hear a mocking
+      laugh and a door closing behind you. '
+    responses:
+    - responseText: "\"Who\u2019s there?\""
+      nextNodeId: 22
+      associatedEvents: []
+    - responseText: Get up and, blindly, head towards the door.
+      nextNodeId: 23
+      associatedEvents: []
+    - responseText: Get up and keep moving forward blindly.
+      nextNodeId: 24
+      associatedEvents: []
+  - id: 12
+    dialogueText: 'You turn around to go back the way you came, but the door you
+      passed through is no longer there. The darkness surrounds you, and the pressure
+      becomes unbearable. '
+    responses:
+    - responseText: Succumb to despair.
+      nextNodeId: 25
+      associatedEvents: []
+  - id: 13
+    dialogueText: 'You ask the voice on the other side to open the door for you.
+      It responds, "Why would I do that?". '
+    responses:
+    - responseText: "\"Please, I\u2019m scared, and my head is killing me.\""
+      nextNodeId: 26
+      associatedEvents: []
+    - responseText: ' "And why not? Open the door!"'
+      nextNodeId: 25
+      associatedEvents: []
+  - id: 14
+    dialogueText: 'You ask who they are. The voice responds, "I am the pressure in
+      your head, a worker doing my job. Do you need anything else? Or can I go back
+      to my room?" '
+    responses:
+    - responseText: '"I need to get out of here."'
+      nextNodeId: 28
+      associatedEvents: []
+    - responseText: '"I need to know where I am."'
+      nextNodeId: 29
+      associatedEvents: []
+    - responseText: '"If you are the pressure in my head, I need you to disappear."'
+      nextNodeId: 30
+      associatedEvents: []
+  - id: 15
+    dialogueText: 'You ask about this place. "For some, this place is a refuge. For
+      others, a prison. For me, it is a workplace". '
+    responses:
+    - responseText: '"Why are you being so cryptic?
+
+        You sound like an idiot."'
+      nextNodeId: 31
+      associatedEvents: []
+    - responseText: '"A prison?"'
+      nextNodeId: 29
+      associatedEvents: []
+    - responseText: '"A refuge?"'
+      nextNodeId: 33
+      associatedEvents: []
+  - id: 16
+    dialogueText: 'You knock on the door. It was open, and a light illuminates the
+      space beyond. '
+    responses:
+    - responseText: Enter.
+      nextNodeId: 34
+      associatedEvents: []
+    - responseText: '"Hello? Is anyone there?"'
+      nextNodeId: 35
+      associatedEvents: []
+  - id: 17
+    dialogueText: 'You knock on the closed door. No response. '
+    responses:
+    - responseText: Insist.
+      nextNodeId: 36
+      associatedEvents: []
+    - responseText: Turn around and knock on the door to the left.
+      nextNodeId: 37
+      associatedEvents: []
+  - id: 18
+    dialogueText: 'Your entire mouth cracks, and the pain overwhelms you. The pressure
+      makes your ears bleed, and the shrill sound is the only thing you hear as you
+      rush forward. The doors line the sides, all closed. Fatigue begins to wear
+      you down. '
+    responses:
+    - responseText: Ignore the pain and exhaustion and keep running for some reason.
+      nextNodeId: 38
+      associatedEvents: []
+    - responseText: Stop and scream in pain. Anyone would understand it as a cry
+        for help.
+      nextNodeId: 39
+      associatedEvents: []
+  - id: 19
+    dialogueText: 'You turn around and discover that the door you entered through
+      is no longer there. The corridor stretches infinitely in that direction as
+      well. Then, the lights illuminating it suddenly go out, and everything turns
+      dark. The pressure increases, and panic seizes you. '
+    responses:
+    - responseText: "Move forward, convinced you\u2019ll find the exit in that direction."
+      nextNodeId: 40
+      associatedEvents: []
+    - responseText: Turn around again to advance in your original direction.
+      nextNodeId: 41
+      associatedEvents: []
+    - responseText: Resign yourself and scream in pain. Anyone would understand it
+        as a cry for help.
+      nextNodeId: 39
+      associatedEvents: []
+  - id: 20
+    dialogueText: 'You advance towards the light source. It is a closed door. '
+    responses:
+    - responseText: Open the door.
+      nextNodeId: 42
+      associatedEvents: []
+    - responseText: Knock on the door.
+      nextNodeId: 7
+      associatedEvents: []
+  - id: 21
+    dialogueText: "You slowly open the door, and it bumps into a hanging light bulb
+      just on the other side. Right after, you hear a door closing. You find yourself
+      in a seemingly endless hallway, with doors on both sides. The door that just
+      closed must be one of the closest ones to you, on the right side. \r"
+    responses:
+    - responseText: You check the right side, going door by door.
+      nextNodeId: 42
+      associatedEvents: []
+    - responseText: You move forward down the hallway, ignoring the sound of the
+        door.
+      nextNodeId: 41
+      associatedEvents: []
+  - id: 22
+    dialogueText: 'You ask, but receive no response. '
+    responses:
+    - responseText: Insist.
+      nextNodeId: 43
+      associatedEvents: []
+    - responseText: You get up and continue moving forward blindly.
+      nextNodeId: 24
+      associatedEvents: []
+    - responseText: You get up and, blindly, head toward the door you heard closing.
+      nextNodeId: 23
+      associatedEvents: []
+  - id: 23
+    dialogueText: 'You approach the door. '
+    responses:
+    - responseText: 'Aggressively, you ask again: "Who''s there?"'
+      nextNodeId: 44
+      associatedEvents: []
+    - responseText: Knock on the door.
+      nextNodeId: 45
+      associatedEvents: []
+    - responseText: Try to force it open.
+      nextNodeId: 46
+      associatedEvents: []
+  - id: 24
+    dialogueText: 'You get up and run forward, not even knowing where you''re going.
+      Pain and exhaustion begin to take their toll on your body. The hallway seems
+      endless. '
+    responses:
+    - responseText: Ignore the pain and exhaustion and keep running for some reason.
+      nextNodeId: 38
+      associatedEvents: []
+    - responseText: "Stop and think. Maybe it\u2019s a good idea to knock on the
+        doors you\u2019re leaving behind."
+      nextNodeId: 47
+      associatedEvents: []
+  - id: 25
+    dialogueText: "Dark thoughts flood your mind, and you sink to the floor, defeated.
+      You literally begin sinking into the ground, and when you're a few meters deep,
+      a light moves through the hallway above you. A figure peers into the hole where
+      you are. \"Not your best attempt, was it?\" \r"
+    responses:
+    - responseText: '"Who are you?"'
+      nextNodeId: 48
+      associatedEvents: []
+    - responseText: '"Get me out of here."'
+      nextNodeId: 49
+      associatedEvents: []
+    - responseText: Say nothing.
+      nextNodeId: 50
+      associatedEvents: []
+    - responseText: "Try to climb up to reach the figure.\r"
+      nextNodeId: 51
+      associatedEvents: []
+  - id: 26
+    dialogueText: "You ask for help. The voice responds: \"I'm sorry, but where you
+      end up or how you feel about it is not my responsibility. Besides, I didn\u2019t
+      trap you here, and I won\u2019t be the one to get you out.\""
+    responses:
+    - responseText: ' "And why not? Open the door for me right now!"'
+      nextNodeId: 27
+      associatedEvents: []
+    - responseText: Turn the doorknob and push forcefully.
+      nextNodeId: 52
+      associatedEvents: []
+    - responseText: '"What am I doing here? What is this place?"'
+      nextNodeId: 15
+      associatedEvents: []
+  - id: 27
+    dialogueText: "You demand that the voice on the other side open the door. It
+      responds: \"And why don\u2019t you open it yourself?\". "
+    responses:
+    - responseText: Slowly open the door.
+      nextNodeId: 42
+      associatedEvents: []
+    - responseText: Mockingly repeat the question with a sarcastic tone.
+      nextNodeId: 31
+      associatedEvents: []
+    - responseText: Turn the doorknob and push forcefully.
+      nextNodeId: 52
+      associatedEvents: []
+  - id: 28
+    dialogueText: "You answer, and the voice on the other side exclaims: \"Then leave.\"
+      Immediately after, you hear footsteps moving away from the door and another
+      door closing in the distance. \r"
+    responses:
+    - responseText: Slowly open the door.
+      nextNodeId: 42
+      associatedEvents: []
+    - responseText: Bang on the door desperately while shouting for help.
+      nextNodeId: 53
+      associatedEvents: []
+  - id: 29
+    dialogueText: "You exclaim, \"I need to know where I am.\" The voice on the other
+      side responds: \"Your eyes need light to see that. Your right eye won\u2019t
+      last forever\". \r\n"
+    responses:
+    - responseText: '"What do you mean?"'
+      nextNodeId: 54
+      associatedEvents: []
+    - responseText: '"Where can I find a light?"'
+      nextNodeId: 55
+      associatedEvents: []
+    - responseText: "\"Why are you being so cryptic? It doesn't make you sound interesting\u2014you
+        just sound like an idiot.\""
+      nextNodeId: 31
+      associatedEvents: []
+  - id: 30
+    dialogueText: "You exclaim, \"If you're just the pressure in my head, I need
+      you to disappear.\" The voice on the other side responds: \"As you wish.\"
+      You hear footsteps moving away from the door, and then a door slamming shut.
+      \r"
+    responses:
+    - responseText: Open the door.
+      nextNodeId: 42
+      associatedEvents: []
+    - responseText: Bang on the door desperately while shouting for help.
+      nextNodeId: 53
+      associatedEvents: []
+  - id: 31
+    dialogueText: "You respond sarcastically. The voice on the other side says: \"A
+      person\u2019s attitude largely determines what their life will be. Do you agree
+      with that?\". \r"
+    responses:
+    - responseText: '"I''m sorry, I just want to get out of here."'
+      nextNodeId: 28
+      associatedEvents: []
+    - responseText: '"I agree."'
+      nextNodeId: 54
+      associatedEvents: []
+    - responseText: '"I disagree."'
+      nextNodeId: 55
+      associatedEvents: []
+  - id: 32
+    dialogueText: "\"A prison?\" you ask. The voice responds: \"A place from which
+      people cannot escape. Funny, I don\u2019t see anything stopping you\u2014do
+      you?\". \r\n"
+    responses:
+    - responseText: '"This door."'
+      nextNodeId: 56
+      associatedEvents: []
+    - responseText: "\u201CYou.\u201D"
+      nextNodeId: 57
+      associatedEvents: []
+    - responseText: Ponder its words and try to force the door open.
+      nextNodeId: 58
+      associatedEvents: []
+  - id: 33
+    dialogueText: "\"A shelter?\" you ask. The voice responds: \"A place to feel
+      safe, protected from whatever may be outside. Do you feel safe in here?\".
+      \r"
+    responses:
+    - responseText: '"Yes."'
+      nextNodeId: 58
+      associatedEvents: []
+    - responseText: '"No."'
+      nextNodeId: 28
+      associatedEvents: []
+    - responseText: "\"You are the danger outside. So no, I don\u2019t feel safe
+        here, but I won\u2019t be safe if I step through this door either.\""
+      nextNodeId: 59
+      associatedEvents: []
+  - id: 34
+    dialogueText: "You enter. The room is a seemingly endless hallway. It looks identical
+      to the hallway you just entered from. \r"
+    responses:
+    - responseText: Walk down the hallway.
+      nextNodeId: 60
+      associatedEvents: []
+    - responseText: Turn back and go the way you came.
+      nextNodeId: 19
+      associatedEvents: []
+  - id: 35
+    dialogueText: 'You ask, but receive no response. The light that illuminated the
+      room on the other side of the door turns off. '
+    responses:
+    - responseText: Enter.
+      nextNodeId: 61
+      associatedEvents: []
+    - responseText: Close the door and continue rushing down the hallway.
+      nextNodeId: 18
+      associatedEvents: []
+  - id: 36
+    dialogueText: 'You bang on the door repeatedly. With one of the hits, the lights
+      go out, and darkness surrounds you. The pressure becomes unbearable. '
+    responses:
+    - responseText: Keep pounding on the door.
+      nextNodeId: 62
+      associatedEvents: []
+    - responseText: Stop and scream in pain. Anyone would take it as a call for help.
+      nextNodeId: 7
+      associatedEvents: []
+  - id: 37
+    dialogueText: 'You knock on the door. It was already open, and with the first
+      knock, it swings fully open. '
+    responses:
+    - responseText: Enter.
+      nextNodeId: 63
+      associatedEvents: []
+    - responseText: '"Hello? Is anyone there?"'
+      nextNodeId: 64
+      associatedEvents: []
+  - id: 38
+    dialogueText: "Your head spins. You can\u2019t stop running. Your strength is
+      gone, but your legs won\u2019t stop. You feel them lift off the ground, your
+      body beginning to float above the hallway floor. You look down and see yourself
+      moving toward an infinite light. "
+    responses:
+    - responseText: Keep moving forward.
+      nextNodeId: 11
+      associatedEvents: []
+    - responseText: Throw yourself at yourself to stop your advance.
+      nextNodeId: 65
+      associatedEvents: []
+  - id: 39
+    dialogueText: 'The sound of your voice makes the walls tremble around you, but
+      you hear nothing except the sound of blood dripping from your ears onto the
+      floor. No one comes to help. The blood pools around you, and darkness envelops
+      you. '
+    responses:
+    - responseText: Succumb to despair.
+      nextNodeId: 25
+      associatedEvents: []
+  - id: 40
+    dialogueText: "You rush forward. Your teeth grind, and the pressure makes you
+      falter. \"You\u2019re almost there,\" you hear from the end of the hallway.
+      Those words feel like a breath of fresh air, motivating you to keep moving,
+      even though you don\u2019t seem to be getting anywhere. Then, you crash face-first
+      into a stone wall and fall to the ground. You hear mocking laughter behind
+      you and a door closing. The air is humid and feels familiar. You turn toward
+      the source of the laughter and the closed door, seeing a faint orange light. "
+    responses:
+    - responseText: Run toward the light.
+      nextNodeId: 3
+      associatedEvents: []
+    - responseText: Shout for help.
+      nextNodeId: 4
+      associatedEvents: []
+    - responseText: Examine the rest of the room.
+      nextNodeId: 5
+      associatedEvents: []
+    - responseText: Give up.
+      nextNodeId: 66
+      associatedEvents: []

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
     public Animator transition;
     public Texture2D cursorArrow;
     public Texture2D cursorArrowUpdate;
-    public string language = "spanish";
+    public TMP_Dropdown languageDropdown;
 
     private void Update()
     {
@@ -72,5 +74,21 @@ public class GameManager : MonoBehaviour
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+
+    public void ChangeLanguage()
+    {
+        Debug.Log(languageDropdown.value);
+        switch (languageDropdown.value)
+        {
+            case 0:
+                PlayerManager.instance.language = "spanish";
+                break;
+            case 1:
+                PlayerManager.instance.language = "english";
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     private float masterVolume = 0f;
     private float musicVolume = 0f;
     private float effectsVolume = 0f;
+    public string language = "spanish";
 
     // Player mechanics
     private List<string> inventory;
