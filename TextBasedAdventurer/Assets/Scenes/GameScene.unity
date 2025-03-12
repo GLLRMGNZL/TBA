@@ -1057,6 +1057,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f87f6d6ec88a35646ab8dd30e718b3c7, type: 2}
   currentDialogue: {fileID: 11400000, guid: 06e7ad8716791fd429edd7b2283858e3, type: 2}
   dialogueText: {fileID: 590304775}
+  backButton: {fileID: 1848066527}
   scrollRect: {fileID: 1361772496}
   typeSpeed: 0.05
   scrollSpeed: 1
@@ -1208,7 +1209,6 @@ MonoBehaviour:
   cursorArrow: {fileID: 2800000, guid: 0e8a7e8e0d22892408c151de73a6f562, type: 3}
   cursorArrowUpdate: {fileID: 2800000, guid: cb7cc8e6ee0478045b3ff0d0dd93fa01, type: 3}
   languageDropdown: {fileID: 0}
-  language: spanish
 --- !u!4 &766696685
 Transform:
   m_ObjectHideFlags: 0
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

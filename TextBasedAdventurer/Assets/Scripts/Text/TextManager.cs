@@ -10,6 +10,7 @@ public class TextManager : MonoBehaviour
     public Dialogue[] dialogues;
     public Dialogue currentDialogue;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI backButton;
     public ScrollRect scrollRect;
     public float typeSpeed = 0.5f;
     public float scrollSpeed = 1f;
@@ -32,11 +33,15 @@ public class TextManager : MonoBehaviour
         if (lang == "spanish")
         {
             currentDialogue = Resources.Load<Dialogue>("Texts/AdventureSpanish");
+            backButton.text = "Volver al menú principal";
+            theEndText.GetComponent<TextMeshProUGUI>().text = "Fin";
 
         }
         if (lang == "english")
         {
             currentDialogue = Resources.Load<Dialogue>("Texts/AdventureEnglish");
+            backButton.text = "Back to main menu";
+            theEndText.GetComponent<TextMeshProUGUI>().text = "The end";
         }
 
         StartDialogue(currentDialogue.rootNode);
