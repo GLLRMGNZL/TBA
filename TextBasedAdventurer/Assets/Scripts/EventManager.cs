@@ -126,6 +126,9 @@ public class EventManager : MonoBehaviour
             image.sprite = s;
             yield return new WaitForSeconds(deathAnimSpeed);
         }
+        // Show THE END text under Kid Panel
+        endingTextAnimator.SetBool("isOpen", true);
+        StartCoroutine(ShowUIAfterTextCoroutine());
     }
 
     private IEnumerator animateGoodEnding()
@@ -164,7 +167,14 @@ public class EventManager : MonoBehaviour
             AudioManager.instance.Stop("Theme");
             AudioManager.instance.Play("Death");
             // TODO: endingText = death Text
-            endingText.text = "Texto predeterminado para final en el que Cave Kid muere.";
+            if (PlayerManager.instance.language == "spanish")
+            {
+                textManager.endingText = "Texto predeterminado en el que Cave Kid muere.";
+            }
+            else if (PlayerManager.instance.language == "english")
+            {
+                textManager.endingText = "Predeterminated text in which Cave Kid dies.";
+            }
             // Show death animation
             StartCoroutine(animateDeath());
         }
@@ -175,7 +185,14 @@ public class EventManager : MonoBehaviour
             AudioManager.instance.Stop("Theme");
             AudioManager.instance.Play("GoodEnding");
             // TODO: endingText = good Ending Text
-            endingText.text = "Texto predeterminado para final en el que Cave Kid logra escapar.";
+            if (PlayerManager.instance.language == "spanish")
+            {
+                textManager.endingText = "Texto predeterminado en el que Cave Kid logra escapar.";
+            } 
+            else if (PlayerManager.instance.language == "english")
+            {
+                textManager.endingText = "Predeterminated text in which Cave Kid manages to scape.";
+            }
             // Show good ending animation
             StartCoroutine(animateGoodEnding()); 
         }

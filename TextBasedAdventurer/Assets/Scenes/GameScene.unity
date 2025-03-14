@@ -1066,6 +1066,7 @@ MonoBehaviour:
   theEndText: {fileID: 1318023003}
   responseButtonContainer: {fileID: 166776449}
   eventManager: {fileID: 2080189321}
+  endingText: 
 --- !u!1 &709923203
 GameObject:
   m_ObjectHideFlags: 0

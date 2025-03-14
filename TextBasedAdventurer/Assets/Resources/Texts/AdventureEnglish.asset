@@ -34,7 +34,8 @@ MonoBehaviour:
       - health/-20
     - responseText: Shout for help.
       nextNodeId: 4
-      associatedEvents: []
+      associatedEvents:
+      - health/-20
     - responseText: Examine the rest of the cave.
       nextNodeId: 5
       associatedEvents: []

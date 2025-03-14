@@ -33,7 +33,8 @@ MonoBehaviour:
       - health/-20
     - responseText: Gritar pidiendo ayuda.
       nextNodeId: 4
-      associatedEvents: []
+      associatedEvents:
+      - health/-20
     - responseText: Examinar el resto de la cueva.
       nextNodeId: 5
       associatedEvents: []

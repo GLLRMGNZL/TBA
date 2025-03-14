@@ -19,6 +19,7 @@ public class TextManager : MonoBehaviour
     public GameObject theEndText;
     public Transform responseButtonContainer;
     public EventManager eventManager;
+    public string endingText = "";
     private string fullText;
     //private Queue<string> sentences = new Queue<string>();
     private bool isTyping = false;
@@ -135,19 +136,19 @@ public class TextManager : MonoBehaviour
     {
         isTyping = true;
         string fullText = node.dialogueText;
-        string previousText = dialogueText.text; // Guarda el texto anterior para mantenerlo opaco
+        string previousText = dialogueText.text; // Saves previous text to maintain its opacity
         string visible = "";
         string invisible = fullText;
 
         for (int i = 0; i < fullText.Length; i++)
         {
-            // Construye el texto con el efecto de transparencia
+            // Build text with transparency
             visible += fullText[i];
             invisible = invisible.Substring(1);
 
-            dialogueText.text = $"{previousText}<color=#FFFFFF>{visible}</color><color=#00000000>{invisible}</color>"; // Mantiene el texto anterior opaco
+            dialogueText.text = $"{previousText}<color=#FFFFFF>{visible}</color><color=#00000000>{invisible}</color>";
 
-            AudioManager.instance.Play("TypeCharacter"); // Reproduce el sonido de tipeo
+            AudioManager.instance.Play("TypeCharacter");
 
             Canvas.ForceUpdateCanvases();
             if (scrollRect.verticalNormalizedPosition > 0f)
@@ -158,7 +159,6 @@ public class TextManager : MonoBehaviour
 
             yield return new WaitForSeconds(typeSpeed);
 
-            // Opción para saltar la animación
             if (!isTyping || !gameObject.activeSelf)
             {
                 dialogueText.text = previousText + fullText;
@@ -174,13 +174,19 @@ public class TextManager : MonoBehaviour
 
     public IEnumerator TypeEndText(TextMeshProUGUI endText)
     {
-        string textToWrite = endText.text;
+        string textToWrite = endingText;
         Debug.Log(textToWrite);
         endText.text = "";
+        string visible = "";
+        string invisible = textToWrite;
 
-        foreach (char character in textToWrite)
+        for (int i = 0; i < textToWrite.Length; i++)
         {
-            endText.text += character;
+            // Build text with transparency
+            visible += textToWrite[i];
+            invisible = invisible.Substring(1);
+
+            endText.text = $"<color=#FFFFFF>{visible}</color><color=#00000000>{invisible}</color>";
             AudioManager.instance.Play("TypeCharacter");
             yield return new WaitForSeconds(typeSpeed);
         }
