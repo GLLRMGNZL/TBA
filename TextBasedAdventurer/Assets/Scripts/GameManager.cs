@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     // Change scene
     public void ReturnToMenu()
     {
+        AudioManager.instance.Play("sound_stop");
+        AudioManager.instance.Stop("game_music");
         AudioManager.instance.Play("Theme");
         Debug.Log("ReturnToMenu called");
         StartCoroutine(LoadLevel(0));
@@ -57,6 +59,9 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         //Debug.Log("NewGame called");
+        AudioManager.instance.Stop("Theme");
+        AudioManager.instance.Play("sound_stop");
+        AudioManager.instance.Play("game_music");
         StartCoroutine(LoadLevel(1));
     }
 
@@ -65,9 +70,7 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("LoadLevel" + level + " called");
         transition.SetTrigger("Start");
-
         yield return new WaitForSeconds(1f);
-
         SceneManager.LoadScene(level);
     }
 
