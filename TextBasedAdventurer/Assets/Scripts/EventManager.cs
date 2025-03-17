@@ -166,7 +166,8 @@ public class EventManager : MonoBehaviour
             AudioManager.instance.Play("EyeFalls");
             AudioManager.instance.Stop("Theme");
             AudioManager.instance.Play("Death");
-            // TODO: endingText = death Text
+
+            // Set ending language
             if (PlayerManager.instance.language == "spanish")
             {
                 textManager.endingText = "Texto predeterminado en el que Cave Kid muere.";
@@ -184,7 +185,8 @@ public class EventManager : MonoBehaviour
             AudioManager.instance.Play("Success");
             AudioManager.instance.Stop("Theme");
             AudioManager.instance.Play("GoodEnding");
-            // TODO: endingText = good Ending Text
+
+            // Set ending language
             if (PlayerManager.instance.language == "spanish")
             {
                 textManager.endingText = "Texto predeterminado en el que Cave Kid logra escapar.";

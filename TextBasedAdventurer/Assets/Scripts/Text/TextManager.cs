@@ -21,12 +21,10 @@ public class TextManager : MonoBehaviour
     public EventManager eventManager;
     public string endingText = "";
     private string fullText;
-    //private Queue<string> sentences = new Queue<string>();
     private bool isTyping = false;
 
     private void OnEnable()
     {
-        //sentences = new Queue<string>();
         dialogueText.text = "";
         string lang = PlayerManager.instance.language;
         Debug.Log(lang);
@@ -151,7 +149,7 @@ public class TextManager : MonoBehaviour
 
             Canvas.ForceUpdateCanvases();
 
-            // Calculate scroll if needed
+            // Scroll if needed
             RectTransform textRectTransform = dialogueText.GetComponent<RectTransform>();
             float contentHeight = textRectTransform.rect.height;
             float viewportHeight = scrollRect.viewport.rect.height;

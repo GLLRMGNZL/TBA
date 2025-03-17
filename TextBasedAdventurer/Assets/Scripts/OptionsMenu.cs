@@ -11,12 +11,12 @@ public class OptionsMenu : MonoBehaviour
     public Slider effectsSlider;
     public TMP_Dropdown languageDropdown;
 
-    // Start is called before the first frame update
     void Start()
     {
         masterSlider.value = PlayerManager.instance.GetMasterVolume();
         musicSlider.value = PlayerManager.instance.GetMusicVolume();
         effectsSlider.value = PlayerManager.instance.GetEffectsVolume();
+
         if (PlayerManager.instance.language == "spanish")
         {
             languageDropdown.value = 0;

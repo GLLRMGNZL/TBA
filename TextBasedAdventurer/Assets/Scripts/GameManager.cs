@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
             Destroy(instance);
             return;
         }
-
-        //DontDestroyOnLoad(gameObject);
     }
     #endregion
 
@@ -74,7 +72,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(level);
     }
 
-    // Full Screen
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;

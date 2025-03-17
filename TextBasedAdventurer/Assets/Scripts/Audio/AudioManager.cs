@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioMixer audioMixer;
-
     public Sound[] sounds;
 
     private void Awake()
@@ -30,7 +29,6 @@ public class AudioManager : MonoBehaviour
             s.source.spatialBlend = 0f;
             s.source.loop = s.loop;
             s.source.outputAudioMixerGroup = s.group;
-            //Debug.Log(s.name);
         }
         Play("Theme");
     }
