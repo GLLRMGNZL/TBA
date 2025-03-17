@@ -146,16 +146,25 @@ public class TextManager : MonoBehaviour
             visible += fullText[i];
             invisible = invisible.Substring(1);
 
+            // Update only visible text
+            dialogueText.text = $"{previousText}<color=#FFFFFF>{visible}</color>";
+
+            Canvas.ForceUpdateCanvases();
+
+            // Calculate scroll if needed
+            RectTransform textRectTransform = dialogueText.GetComponent<RectTransform>();
+            float contentHeight = textRectTransform.rect.height;
+            float viewportHeight = scrollRect.viewport.rect.height;
+
+            if (contentHeight > viewportHeight)
+            {
+                scrollRect.verticalNormalizedPosition = 0f;
+            }
+
+            // Update complete text
             dialogueText.text = $"{previousText}<color=#FFFFFF>{visible}</color><color=#00000000>{invisible}</color>";
 
             AudioManager.instance.Play("TypeCharacter");
-
-            Canvas.ForceUpdateCanvases();
-            if (scrollRect.verticalNormalizedPosition > 0f)
-            {
-                Debug.Log(scrollRect.verticalNormalizedPosition);
-                scrollRect.verticalNormalizedPosition -= ((scrollSpeed * scrollRect.verticalNormalizedPosition) * 0.6f) * Time.deltaTime;
-            }
 
             yield return new WaitForSeconds(typeSpeed);
 
