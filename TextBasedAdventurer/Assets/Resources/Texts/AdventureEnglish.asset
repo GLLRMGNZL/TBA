@@ -365,9 +365,9 @@ MonoBehaviour:
       nextNodeId: 52
       associatedEvents: []
   - id: 28
-    dialogueText: "You answer, and the voice on the other side exclaims: \"Then leave.\"
-      Immediately after, you hear footsteps moving away from the door and another
-      door closing in the distance. \r"
+    dialogueText: "\nYou answer, and the voice on the other side exclaims: \"Then
+      leave.\" Immediately after, you hear footsteps moving away from the door and
+      another door closing in the distance. \r"
     responses:
     - responseText: Slowly open the door.
       nextNodeId: 42

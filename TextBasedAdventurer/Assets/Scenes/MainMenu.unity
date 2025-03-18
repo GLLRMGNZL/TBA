@@ -2946,9 +2946,9 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 03f8ab92a8469634285f0214ca0a3a46, type: 3}
+    clip: {fileID: 8300000, guid: f3347704ff630144eac0677f6dea557f, type: 3}
     volume: 1
-    pitch: 0.55
+    pitch: 0.75
     loop: 1
     source: {fileID: 0}
     group: {fileID: -2136964936342209114, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
@@ -2990,7 +2990,7 @@ MonoBehaviour:
   - name: game_music
     clip: {fileID: 8300000, guid: 0449db378b898db44b2f2bc639f49811, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.8
     loop: 0
     source: {fileID: 0}
     group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
