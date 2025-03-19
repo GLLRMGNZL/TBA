@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.Play("sound_stop");
         AudioManager.instance.Stop("game_music");
-        AudioManager.instance.Play("Theme");
         Debug.Log("ReturnToMenu called");
         StartCoroutine(LoadLevel(0));
     }
@@ -59,7 +58,6 @@ public class GameManager : MonoBehaviour
         //Debug.Log("NewGame called");
         AudioManager.instance.Stop("Theme");
         AudioManager.instance.Play("sound_stop");
-        AudioManager.instance.Play("game_music");
         StartCoroutine(LoadLevel(1));
     }
 
@@ -70,6 +68,16 @@ public class GameManager : MonoBehaviour
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(level);
+        if (level == 0)
+        {
+            AudioManager.instance.Play("Theme");
+            
+        }
+        if (level == 1)
+        {
+            AudioManager.instance.Play("game_music");
+        }
+        
     }
 
     public void SetFullScreen(bool isFullScreen)
