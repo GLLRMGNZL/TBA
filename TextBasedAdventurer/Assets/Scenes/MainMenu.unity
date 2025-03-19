@@ -2988,9 +2988,23 @@ MonoBehaviour:
     source: {fileID: 0}
     group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
   - name: game_music
-    clip: {fileID: 8300000, guid: 0449db378b898db44b2f2bc639f49811, type: 3}
+    clip: {fileID: 8300000, guid: 0d29f4b860f475e4f856deffd9d4e8e3, type: 3}
     volume: 1
     pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -2136964936342209114, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: sound_play
+    clip: {fileID: 8300000, guid: 8a707c65a89339343b80506ddd2247a4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
+  - name: sound_stop
+    clip: {fileID: 8300000, guid: 3b4c8a0990be5934d90679f7f87b7ac5, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
     group: {fileID: -7011088293330179239, guid: 91bbf2963e597da4791fd98f351b300c, type: 2}
