@@ -74,19 +74,19 @@ public class EventManager : MonoBehaviour
         switch (PlayerManager.instance.GetHealth())
         {
             case 100:
-                ChangeToSprite("CaveKid2");
+                ChangeToSprite("caveKid2");
                 break;
             case 80:
-                ChangeToSprite("CaveKid3");
+                ChangeToSprite("caveKid3");
                 break;
             case 60:
-                ChangeToSprite("CaveKid4");
+                ChangeToSprite("caveKid4");
                 break;
             case 40:
-                ChangeToSprite("CaveKid5");
+                ChangeToSprite("caveKid5");
                 break;
             case 20:
-                ChangeToSprite("CaveKid6");
+                ChangeToSprite("caveKid6");
                 break;
             case 0:
                 Ending("Dead");
