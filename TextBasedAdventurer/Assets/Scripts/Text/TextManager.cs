@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour
 {
@@ -25,24 +26,40 @@ public class TextManager : MonoBehaviour
 
     private void OnEnable()
     {
-        dialogueText.text = "";
-        string lang = PlayerManager.instance.language;
-        Debug.Log(lang);
-
-        if (lang == "spanish")
+        if (SceneManager.GetActiveScene().name.Equals("TrailerScene"))
         {
-            currentDialogue = Resources.Load<Dialogue>("Texts/AdventureSpanish");
-            backButton.text = "Volver al menú principal";
-            theEndText.GetComponent<TextMeshProUGUI>().text = "Fin";
-
+            AudioManager.instance.Stop("Theme");
+            dialogueText.text = "";
+            currentDialogue = Resources.Load<Dialogue>("Texts/TrailerText");
+            StartCoroutine(Wait());
         }
-        if (lang == "english")
+        else
         {
-            currentDialogue = Resources.Load<Dialogue>("Texts/AdventureEnglish");
-            backButton.text = "Back to main menu";
-            theEndText.GetComponent<TextMeshProUGUI>().text = "The end";
-        }
+            dialogueText.text = "";
+            string lang = PlayerManager.instance.language;
+            Debug.Log(lang);
 
+            if (lang == "spanish")
+            {
+                currentDialogue = Resources.Load<Dialogue>("Texts/AdventureSpanish");
+                backButton.text = "Volver al menú principal";
+                theEndText.GetComponent<TextMeshProUGUI>().text = "Fin";
+
+            }
+            if (lang == "english")
+            {
+                currentDialogue = Resources.Load<Dialogue>("Texts/AdventureEnglish");
+                backButton.text = "Back to main menu";
+                theEndText.GetComponent<TextMeshProUGUI>().text = "The end";
+            }
+
+            StartDialogue(currentDialogue.rootNode);
+        }
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(10f);
         StartDialogue(currentDialogue.rootNode);
     }
 

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be359de955bd9104a8d1604d5cd8944c, type: 3}
+  m_Name: TrailerText
+  m_EditorClassIdentifier: 
+  rootNode:
+    id: 1
+    dialogueText: 'A child trapped in a cave from which he wants to escape. The owners
+      of a shelter that is a prison for thought. Owners who do not own the land but
+      believe they do, and by believing it, they become its illegitimate masters.
+      But masters nonetheless. They write their own rules, which stem from themselves;
+      and what is, exists through them. They are darkness and fear, and they project
+      this darkness around them. And the child, who longs to see beyond the darkness
+      to glimpse the stars, sees only their light reflected on the Moon.
+
+      Dark
+      by nature.'
+    responses:
+    - responseText: 
+      nextNodeId: 5
+      associatedEvents: []
+    - responseText: 
+      nextNodeId: 5
+      associatedEvents: []
+  dialogueNodes: []
