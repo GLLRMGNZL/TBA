@@ -14,16 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootNode:
     id: 1
-    dialogueText: 'A child trapped in a cave from which he wants to escape. The owners
-      of a shelter that is a prison for thought. Owners who do not own the land but
-      believe they do, and by believing it, they become its illegitimate masters.
-      But masters nonetheless. They write their own rules, which stem from themselves;
-      and what is, exists through them. They are darkness and fear, and they project
-      this darkness around them. And the child, who longs to see beyond the darkness
-      to glimpse the stars, sees only their light reflected on the Moon.
+    dialogueText: 'SOON
 
-      Dark
-      by nature.'
+      ON ITCH.IO'
     responses:
     - responseText: 
       nextNodeId: 5
